@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build:style": "tailwind build src/styles/index.css -c tailwind.js -o src/styles/tailwind.css",
-    "start": "craco start",
+    "start": "node server.js",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
