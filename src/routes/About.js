@@ -1,6 +1,9 @@
 import React from "react";
 import profile_pic from "../images/profile.png";
 import profile_animated from "../images/profile_animated.png";
+import ScrollToTop from '../components/ScrollToTop';
+import { Link, HashRouter, Route } from "react-router-dom";
+import Navigation from "../components/Navigation";
 
 class About extends React.Component{
   constructor(props) {
@@ -30,7 +33,7 @@ class About extends React.Component{
 
   render() {
     return (
-        <div className="w-full top-16 relative bg-primary">
+        <div className="block w-full min-h-screen relative bg-primary">
           <div className="flip relative top-10 z-40">
             <div ref={this.profileImageRef}
               className="flip-image"
