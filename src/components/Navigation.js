@@ -1,7 +1,6 @@
 import React from "react";
-import { HashRouter, Route, Routes, Link, useRef } from "react-router-dom";
-import ScrollToTop from './ScrollToTop';
-import Projects from "../routes/Projects";
+import { Link } from "react-router-dom";
+// import { HashRouter, Route, Routes, Link, useRef } from "react-router-dom";
 
 class Navigation extends React.Component{
   constructor(props){
@@ -12,16 +11,9 @@ class Navigation extends React.Component{
 
   }
   componentWillReceiveProps(){
-    // Scroll to stop when page loaded
-    console.log('project received')
-    console.log(Projects.projectRef)
 
   }
 
-  testfun = () => {
-    console.log(Projects.projectRef)
-    Projects.projectRef.current.scrollIntoView()
-  }
 
   render() {
 

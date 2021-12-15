@@ -1,9 +1,6 @@
 import React from "react";
 import profile_pic from "../images/profile.png";
 import profile_animated from "../images/profile_animated.png";
-import ScrollToTop from '../components/ScrollToTop';
-import { Link, HashRouter, Route } from "react-router-dom";
-import Navigation from "../components/Navigation";
 
 class About extends React.Component{
   constructor(props) {
@@ -21,11 +18,6 @@ class About extends React.Component{
     // Fetch data from API defined by admin
   }
 
-  componentWillReceiveProps(){
-    // Scroll to stop when page loaded
-    window.scrollTo(0, 0)
-  }
-
   flipimg(){
     // Flip image when hovered in/out
     this.profileImageRef.current.classList.toggle('flipped');
@@ -33,12 +25,13 @@ class About extends React.Component{
 
   render() {
     return (
-        <div className="block w-full min-h-screen relative bg-primary">
+        <div className="mt-24 w-full min-h-screen h-full bg-primary">
           <div className="flip relative top-10 z-40">
             <div ref={this.profileImageRef}
               className="flip-image"
               onMouseOver={() => this.flipimg()}
-              onMouseOut={() => this.flipimg()}>
+              onMouseOut={() => this.flipimg()}
+              onClick={() => this.flipimg()}>
               <img src={profile_animated} alt="Brian Cho" className="profile-front profile-img"/>
               <img src={profile_pic} alt="" className="profile-back profile-img"/>
             </div>
