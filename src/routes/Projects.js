@@ -1,8 +1,4 @@
 import React from "react";
-// import NEED TO HAVE RECIPE WEBSITE PHOTO
-// import zillowscraper from "../images/lennyspizza/realestatezillow.png";
-// import imageprocess from "../images/imageanalysis.jpg";
-// import imageanalysis from "../images/displaypanelanalysis.png";
 import AwesomeSlider from "react-awesome-slider";
 import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
