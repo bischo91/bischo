@@ -11,7 +11,7 @@ class Resume extends React.Component{
           <h1>RESUME</h1>
           <div className="row space-y-4 mt-8">
             <img
-              className="m-auto"
+              className="max-w-max w-full m-auto"
               src={resume}
               alt="Resume"/>
           </div>
