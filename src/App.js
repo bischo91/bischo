@@ -5,6 +5,7 @@ import About from './routes/About';
 import Projects from './routes/Projects';
 import Resume from './routes/Resume';
 import Contact from './routes/Contact';
+// import Contact from '../public/Contact';
 import { Link, Element } from "react-scroll";
 
 
