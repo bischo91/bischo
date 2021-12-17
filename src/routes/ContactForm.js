@@ -52,7 +52,7 @@ export const ContactForm = () => {
       <button
         type="submit"
         className="flex float-right mt-4 rounded-lg
-        bg-blue-500 text-primary font-bold py-2 px-4"
+        bg-primary text-primary font-bold py-2 px-4"
       >
         Send
       </button>

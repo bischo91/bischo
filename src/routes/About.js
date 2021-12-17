@@ -1,6 +1,7 @@
 import React from "react";
-import profile_pic from "../images/profile.png";
-import profile_animated from "../images/profile_animated.png";
+import profile_pic from "../images/profile/profile.png";
+import profile_animated from "../images/profile/profile_animated.png";
+import { Link, Element } from "react-scroll";
 
 class About extends React.Component {
   constructor(props) {
@@ -24,34 +25,41 @@ class About extends React.Component {
 
   render() {
     return (
-      <div className="mt-24 w-full min-h-screen h-full bg-primary">
-        <div className="flip relative top-10 z-40">
-          <div
-            ref={this.profileImageRef}
-            className="flip-image"
-            onMouseOver={() => this.flipimg()}
-            onMouseOut={() => this.flipimg()}
-            onClick={() => this.flipimg()}
-          >
-            <img
-              src={profile_animated}
-              alt="Brian Cho"
-              className="profile-front profile-img"
-            />
-            <img
-              src={profile_pic}
-              alt=""
-              className="profile-back profile-img"
-            />
+      <div className="w-full min-h-screen h-full bg-primary">
+        <div className="flip m-auto mt-20 h-96 w-96">
+          <div className="flip-content">
+            <div className="flip-front">
+              <img src={profile_animated} alt="" className="w-full" />
+            </div>
+            <div className="flip-back">
+              <img src={profile_pic} alt="" className="w-full" />
+            </div>
           </div>
         </div>
-        <div className="bg-primary h-full relative top-96 block justify-around">
-          <p className="font-mono text-center text-primary text-lg">
+        <div className="bg-primary h-full mt-8 mb-12 justify-around">
+          <p className="text-center text-primary text-lg">
             Hello World! <br></br>
             I'm Brian.<br></br>
             I'm an enthusiastic developer and an engineer<br></br>
-            This is a demo website.
           </p>
+        </div>
+        <div className="">
+          <section className="scroll-arrow flex flex-col">
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              onSetActive={this.handleSetActive}
+              className="cursor-pointer"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </Link>
+          </section>
         </div>
       </div>
     );

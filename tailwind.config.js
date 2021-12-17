@@ -11,6 +11,15 @@ module.exports = {
       primary: "#ffffff",
       secondary: "#ffffff",
     },
+    extend: {
+      fontFamily: {
+        Lobster: ["Lobster", "cursive"],
+        LobsterTwo: ["Lobster Two", "cursive"],
+        BebasNeue: ["Bebas Neue", "cursive"],
+        BalsamiqSans: ["Balsamiq Sans", "cursive"],
+        OpenSansCondensed: ["Open Sans Condensed", "sans-serif"],
+      },
+    },
 
     extend: {},
   },
