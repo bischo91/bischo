@@ -1,19 +1,23 @@
 import React, { useRef } from "react";
-import ContactUs from "./ContactUs";
+import ContactForm from "./ContactForm";
 
-class Contact extends React.Component{
+class Contact extends React.Component {
   constructor(props) {
     super(props);
-      };
-
-
+  }
 
   render() {
-      return (
-        <div className="w-5/6 h-full mt-24 m-auto bg-primary min-h-screen">
-          <ContactUs />
+    return (
+      <div className="w-5/6 h-full mt-24 m-auto bg-primary min-h-screen">
+        <div className="w-full h-full m-auto bg-secondary flex-col flex rounded-lg">
+          <h1 className="flex text-primary mx-12 py-6 text-4xl">Contact Me</h1>
+          <h3 className="flex text-secondary mx-12 px-2 text-xl">
+            Please feel free to contact me!
+          </h3>
+          <ContactForm />
         </div>
-        );
+      </div>
+    );
   }
 }
 
