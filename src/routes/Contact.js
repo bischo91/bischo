@@ -1,10 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import ContactForm from "./ContactForm";
 
 class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

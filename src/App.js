@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
 import About from "./routes/About";
 import Projects from "./routes/Projects";
 import Resume from "./routes/Resume";
 import Contact from "./routes/Contact";
 import Navigation from "./components/Navigation";
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     // Scroll to stop when page loaded

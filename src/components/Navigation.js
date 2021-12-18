@@ -1,5 +1,5 @@
-import { Link, Element } from "react-scroll";
-import React, { Component, createRef } from "react";
+import { Link } from "react-scroll";
+import React, { createRef } from "react";
 import github_logo from "../images/github.png";
 import linkedin_logo from "../images/linkedin.png";
 
@@ -119,6 +119,7 @@ class Navigation extends React.Component {
                 className="cursor-pointer h-full float-right"
                 href="https://github.com/bischo91"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src={github_logo}
