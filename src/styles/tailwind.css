@@ -6,60 +6,111 @@
 
 @layer utilities {
   /* Profil image style and filp properties */
-  .flip .flip-image.flipped {
-    transform:rotatey(-180deg);
-    -ms-transform:rotatey(-180deg); /* IE 9 */
-    -moz-transform:rotatey(-180deg); /* Firefox */
-    -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
-    -o-transform:rotatey(-180deg); /* Opera */
-  }
-  .flip .flip-image {
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: 1s;
-    -moz-transform-style: preserve-3d;
-    -moz-transition: 1s;
-    -ms-transform-style: preserve-3d;
-    -ms-transition: 1s;
-    -o-transform-style: preserve-3d;
-    -o-transition: 1s;
+  .flip-content {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
     transform-style: preserve-3d;
-    transition: 1s;
   }
-  .flip .flip-image .profile-img {
+  .flip:hover .flip-content {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+  }
+  .flip-front,
+  .flip-back {
     position: absolute;
-    /* z-index: 2; */
-    backface-visibility: hidden;  /* W3C */
-    -webkit-backface-visibility: hidden; /* Safari & Chrome */
-    -moz-backface-visibility: hidden; /* Firefox */
-    -ms-backface-visibility: hidden; /* Internet Explorer */
-    -o-backface-visibility: hidden; /* Opera */
-    /* overflow: auto; */
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
   }
-  .flip .flip-image .profile-back {
-    transform:rotatey(-180deg);
-    -ms-transform:rotatey(-180deg); /* IE 9 */
-    -moz-transform:rotatey(-180deg); /* Firefox */
-    -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
-    -o-transform:rotatey(-180deg); /* Opera */
+  .flip-back {
+    transform: rotateY(180deg);
   }
-  .profile-front{
-    height: 15em;
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-top: 5em;
-    left:-7.5em;
+
+  /* Scroll Arrow */
+  .scroll-arrow section::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 80%;
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.8) 80%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.8) 80%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
-  .profile-back{
-    height: 15em;
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-top: 5em;
-    left:-7.5em;
+  .scroll-arrow a {
+    z-index: 2;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font: normal 400 20px/1 "Josefin Sans", sans-serif;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: opacity 0.3s;
   }
-  .awssld > .awssld__wrapper > .awssld__container > .awssld__box > .awssld__content > img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: scale-down;
-  
-}
+  .scroll-arrow a:hover {
+    opacity: 0.5;
+  }
+  .scroll-arrow a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb07 2s infinite;
+    animation: sdb07 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  .scroll-arrow a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  .scroll-arrow a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+  }
+  .scroll-arrow a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  @keyframes sdb07 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  /* Slider */
+  .awssld
+    > .awssld__wrapper
+    > .awssld__container
+    > .awssld__box
+    > .awssld__content
+    > img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: scale-down;
+  }
 }
