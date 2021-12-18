@@ -1,7 +1,7 @@
 import { Link, Element } from "react-scroll";
 import React, { Component, createRef } from "react";
-import github_logo from "../images/logos/github.png";
-import linkedin_logo from "../images/logos/linkedin.png";
+import github_logo from "../images/github.png";
+import linkedin_logo from "../images/linkedin.png";
 
 class Navigation extends React.Component {
   constructor(props) {
