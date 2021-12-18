@@ -1,7 +1,7 @@
 import React from "react";
 import resume from "../images/resume.jpg";
 // import resume_pdf from "../pdf/resume.pdf";
-// href={resume_pdf} 
+// href={resume_pdf}
 
 class Resume extends React.Component {
   componentDidMount() {}
@@ -11,7 +11,10 @@ class Resume extends React.Component {
       <div className="w-5/6 h-full mt-24 m-auto bg-primary min-h-screen text-primary">
         <h1 className="text-4xl mb-8">RESUME</h1>
         <div className="row space-y-4 mt-8">
-          <a target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://drive.google.com/file/d/1ldU8aXJpr4alfu2B1VkgUHWCFhmO4Wz7/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
             <img
               src={resume}
               alt="Resume"
