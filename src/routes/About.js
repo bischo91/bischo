@@ -32,7 +32,8 @@ class About extends React.Component {
     return (
       <div className="w-full min-h-screen h-full bg-primary">
         <div className="flip m-auto mt-20 h-56 w-56 sm:w-96 sm:h-96"
-            onClick={()=>(document.getElementById(this.id).classList.toggle("flip"))}
+            onClick={()=>(document.getElementById("flipProfile").classList.toggle("flip"))}
+            id="flipProfile"
             >
           <div
             className="flip-content">
