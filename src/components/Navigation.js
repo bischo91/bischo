@@ -116,7 +116,7 @@ class Navigation extends React.Component {
           <div className="w-1/6 flex">
             <div className="m-auto h-1/2 w-full">
               <a
-                className="cursor-pointer h-full float-right"
+                className="cursor-pointer h-full w-1/2 sm:w-auto float-right"
                 href="https://github.com/bischo91"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -128,7 +128,7 @@ class Navigation extends React.Component {
                 />
               </a>
               <a
-                className="cursor-pointer h-full float-right"
+                className="cursor-pointer h-full w-1/2 sm:w-auto float-right"
                 href="https://www.linkedin.com/in/bischo"
                 target="_blank"
                 rel="noopener noreferrer"

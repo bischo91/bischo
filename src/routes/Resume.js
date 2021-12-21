@@ -8,7 +8,7 @@ class Resume extends React.Component {
 
   render() {
     return (
-      <div className="w-5/6 h-full mt-24 m-auto bg-primary min-h-screen text-primary">
+      <div className="w-5/6 md:w-2/3 h-full mt-24 m-auto bg-primary min-h-screen text-primary">
         <h1 className="text-4xl mb-8">RESUME</h1>
         <div className="row space-y-4 mt-8">
           <a
