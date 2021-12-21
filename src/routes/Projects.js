@@ -26,10 +26,6 @@ import imageanalysis_3 from "../images/imageanalysis_pixeluniformity.png";
 import imageprocess_1 from "../images/imageanalysis_imageprocess.jpg";
 
 class Projects extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   render() {
    return (
@@ -47,7 +43,7 @@ class Projects extends React.Component {
              </AwesomeSlider>
            </div>
            <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
-             <div className="w-full mx-3 text-md my-5 lg:w-3/4">
+             <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
                <h3 className="text-lg">About Project</h3>
                <p className="w-full mx-auto text-md">
                  I designed and maintained a website for a family-owned
@@ -58,7 +54,7 @@ class Projects extends React.Component {
                  restaurant owner to manage their business more efficiently.
                </p>
              </div>
-             <div className="w-full mx-3 my-5 lg:w-1/4">
+             <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
                <h3 className="text-lg">Technical Sheet</h3>
                <ul className="list-disc">
                  <li>PHP</li>
@@ -81,7 +77,7 @@ class Projects extends React.Component {
              </AwesomeSlider>
            </div>
            <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
-             <div className="w-full mx-3 text-md my-5 lg:w-3/4">
+             <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
                <h3 className="text-lg">About Project</h3>
                <p className="w-full mx-auto text-md">
                  Parfaitlyme is a demo webiste to show recipes designed using
@@ -92,7 +88,7 @@ class Projects extends React.Component {
                  with infinite scroll.
                </p>
              </div>
-             <div className="w-full mx-3 my-5 lg:w-1/4">
+             <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
                <h3 className="text-lg">Technical Sheet</h3>
                <ul className="list-disc">
                  <li>Django</li>
@@ -115,13 +111,13 @@ class Projects extends React.Component {
              </AwesomeSlider>
            </div>
            <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
-             <div className="w-full mx-3 text-md my-5 lg:w-3/4">
+             <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
                <h3 className="text-lg">About Project</h3>
                <p className="w-full mx-auto text-md">
                  filld this at the end
                </p>
              </div>
-             <div className="w-full mx-3 my-5 lg:w-1/4">
+             <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
                <h3 className="text-lg">Technical Sheet</h3>
                <ul className="list-disc">
                  <li>Python
@@ -150,7 +146,7 @@ class Projects extends React.Component {
              </AwesomeSlider>
            </div>
            <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
-             <div className="w-full mx-3 text-md my-5 lg:w-3/4">
+             <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
                <h3 className="text-lg">About Project</h3>
                <p className="w-full mx-auto text-md">
                I developed customized account book that composes all the transactions from multiple banks to easily visualize spending.
@@ -160,7 +156,7 @@ class Projects extends React.Component {
                Yearly, or long-term, spending data can be presented with user-defined month range with saved monthly excel files.
                </p>
              </div>
-             <div className="w-full mx-3 my-5 lg:w-1/4">
+             <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
                <h3 className="text-lg">Technical Sheet</h3>
                <ul className="list-disc">
                  <li>Python
@@ -186,7 +182,7 @@ class Projects extends React.Component {
              </AwesomeSlider>
            </div>
            <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
-             <div className="w-full mx-3 text-md my-5 lg:w-3/4">
+             <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
                <h3 className="text-lg">About Project</h3>
                <p className="w-full mx-auto text-md">
                  The software I developed analyzes Atomic Force Microscopic (AFM) images of CarbonNano Tube (CNT).
@@ -196,7 +192,7 @@ class Projects extends React.Component {
                  The software also has GUI that allows users to load folder, go through images in that folder, and save processed images.
                </p>
              </div>
-             <div className="w-full mx-3 my-5 lg:w-1/4">
+             <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
                <h3 className="text-lg">Technical Sheet</h3>
                  <ul className="list-disc">
                    <li>Python
@@ -226,7 +222,7 @@ class Projects extends React.Component {
              </AwesomeSlider>
            </div>
            <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
-             <div className="w-full mx-3 text-md my-5 lg:w-3/4">
+             <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
                <h3 className="text-lg">About Project</h3>
                <p className="w-full mx-auto text-md">
                  I programmed image processing program that detects display panels from photographic images, and calculates uniformity based on grey-scale values.
@@ -234,7 +230,7 @@ class Projects extends React.Component {
                  For both applications, the code generates excel files that combine the data from multiple images to allow batch processing.
                </p>
              </div>
-             <div className="w-full mx-3 my-5 lg:w-1/4">
+             <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
                <h3 className="text-lg">Technical Sheet</h3>
                  <ul className="list-disc">
                    <li>Python

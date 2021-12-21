@@ -6,8 +6,7 @@ import { Link } from "react-scroll";
 class About extends React.Component {
   constructor(props) {
     super(props);
-    this.profileImageRef = React.createRef();
-    this.state = {};
+    this.scrollArrow = React.createRef();
   }
 
   componentDidMount() {
@@ -16,18 +15,26 @@ class About extends React.Component {
     // Scroll to stop when page loaded
     window.scrollTo(0, 0);
     // Fetch data from API defined by admin
+    window.addEventListener("resize", this.handleResize);
   }
 
-  flipimg() {
-    // Flip image when hovered in/out
-    this.profileImageRef.current.classList.toggle("flipped");
-  }
+  handleResize = () => {
+    // Hide scroll arrow when the window is too small
+    if (window.innerHeight < 720) {
+      this.scrollArrow.current.classList.add("hidden");
+    } else{
+      this.scrollArrow.current.classList.remove("hidden");
+    }
+  };
 
   render() {
     return (
       <div className="w-full min-h-screen h-full bg-primary">
-        <div className="flip m-auto mt-20 h-96 w-96">
-          <div className="flip-content">
+        <div className="flip m-auto mt-20 h-56 w-56 sm:w-96 sm:h-96"
+            onClick={()=>(document.getElementById(this.id).classList.toggle("flip"))}
+            >
+          <div
+            className="flip-content">
             <div className="flip-front">
               <img src={profile_animated} alt="" className="w-full" />
             </div>
@@ -36,15 +43,15 @@ class About extends React.Component {
             </div>
           </div>
         </div>
-        <div className="bg-primary h-full mt-8 mb-12 justify-around">
-          <p className="text-center text-primary text-lg">
+        <div className="bg-primary h-full mx-4 mt-24 sm:mt-16">
+          <p className="text-center text-primary text-sm sm:text-lg md:text-xl lg:text-2xl">
             Hello World! <br></br>
             I'm Brian.<br></br>
             I'm an enthusiastic developer and an engineer<br></br>
           </p>
         </div>
-        <div className="">
-          <section className="scroll-arrow flex flex-col">
+        <div className="bottom-0 absolute h-1/6 w-screen" ref={this.scrollArrow}>
+          <section className="absolute left-1/2 bottom-24 scroll-arrow flex flex-col">
             <Link
               activeClass="active"
               to="projects"
@@ -65,5 +72,6 @@ class About extends React.Component {
     );
   }
 }
+
 
 export default About;

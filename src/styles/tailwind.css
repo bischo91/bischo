@@ -16,6 +16,7 @@
     transform: rotateY(180deg);
     transition: transform 1s;
   }
+
   .flip-front,
   .flip-back {
     position: absolute;

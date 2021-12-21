@@ -51,7 +51,7 @@ class Navigation extends React.Component {
         ref={this.navrepositionRef}
       >
         <div
-          className="bg-secondary text-lg w-full h-16 flex"
+          className="bg-secondary text-sm sm:text-lg w-full h-16 flex"
           ref={this.navRef}
         >
           <nav className="w-5/6 flex">
