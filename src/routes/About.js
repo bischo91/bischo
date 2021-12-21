@@ -16,6 +16,7 @@ class About extends React.Component {
     window.scrollTo(0, 0);
     // Fetch data from API defined by admin
     window.addEventListener("resize", this.handleResize);
+    this.handleResize();
   }
 
   handleResize = () => {

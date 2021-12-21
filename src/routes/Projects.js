@@ -23,7 +23,11 @@ import imageanalysis_1 from "../images/imageanalysis_panellevel.jpg";
 import imageanalysis_2 from "../images/imageanalysis_pixellevel.png";
 import imageanalysis_3 from "../images/imageanalysis_pixeluniformity.png";
 
-import imageprocess_1 from "../images/imageanalysis_imageprocess.jpg";
+import imageprocess_1 from "../images/imageanalysis_imageprocess_1.jpg";
+import imageprocess_2 from "../images/imageanalysis_imageprocess_2.jpg";
+import imageprocess_3 from "../images/imageanalysis_imageprocess_3.jpg";
+
+import github_logo from "../images/github_white.png";
 
 class Projects extends React.Component {
 
@@ -32,8 +36,22 @@ class Projects extends React.Component {
      <div className="text-primary flex-col w-5/6 md:w-2/3 m-auto mt-24 min-h-screen bg-primary">
        <h1 className="text-4xl mb-8">PROJECTS</h1>
        <div className="row space-y-2 mt-4 mx-auto">
-         <h2 className="text-2xl">Lenny's Pizza Website</h2>
-         <div className="flex flex-col mt-4">
+         <div className="w-full inline-flex h-8 mb-8">
+           <h2 className="text-2xl">Lenny's Pizza Website</h2>
+           <a
+             className="cursor-pointer h-full w-auto ml-8 float-right"
+             href="https://github.com/bischo91/lennyspizza"
+             target="_blank"
+             rel="noopener noreferrer"
+           >
+             <img
+               src={github_logo}
+               alt="GitHub"
+               className="h-full w-full"
+             />
+           </a>
+         </div>
+         <div className="flex flex-col">
            <div className="w-full mx-auto">
              <AwesomeSlider animation="cubeAnimation">
                <div data-src={lennyspizza_1} />
@@ -51,7 +69,13 @@ class Projects extends React.Component {
                  included contact form to send an email to the restaurant
                  owner. I also obtained web traffic data such as number of
                  visitors trend and general locations, which helped the
-                 restaurant owner to manage their business more efficiently.
+                 restaurant owner to manage their business more efficiently.<br></br>
+                 Click <a
+                 className="underline"
+                 href="http://lennyspizza.herokuapp.com/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 here</a> to see the live website.
                </p>
              </div>
              <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
@@ -67,8 +91,22 @@ class Projects extends React.Component {
        </div>
 
        <div className="row space-y-2 mt-4 mx-auto">
-         <h2 className="text-2xl">Parfaitlyme</h2>
-         <div className="flex flex-col mt-4">
+         <div className="w-full inline-flex h-8 mb-8">
+           <h2 className="text-2xl">Parfaitlyme</h2>
+             <a
+               className="cursor-pointer h-full w-auto ml-8 float-right"
+               href="https://github.com/bischo91/parfaitly-django-react"
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               <img
+                 src={github_logo}
+                 alt="GitHub"
+                 className="h-full w-full"
+               />
+             </a>
+         </div>
+         <div className="flex flex-col">
            <div className="w-full mx-auto">
              <AwesomeSlider animation="cubeAnimation">
                <div data-src={parfaitlyme_1} />
@@ -101,8 +139,22 @@ class Projects extends React.Component {
        </div>
 
        <div className="row space-y-2 mt-4 mx-auto">
-         <h2 className="text-2xl">Zillow Scraper</h2>
-         <div className="flex flex-col mt-4">
+         <div className="w-full inline-flex h-8 mb-8">
+           <h2 className="text-2xl">Zillow Scraper</h2>
+             <a
+               className="cursor-pointer h-full w-auto ml-8 float-right"
+               href="https://github.com/bischo91/RealEstateDataCrawling"
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               <img
+                 src={github_logo}
+                 alt="GitHub"
+                 className="h-full w-full"
+               />
+             </a>
+         </div>
+         <div className="flex flex-col">
            <div className="w-full mx-auto">
              <AwesomeSlider animation="cubeAnimation">
                <div data-src={zillowscrape_1} />
@@ -114,7 +166,14 @@ class Projects extends React.Component {
              <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
                <h3 className="text-lg">About Project</h3>
                <p className="w-full mx-auto text-md">
-                 filld this at the end
+                 Zillow Scraper is built to comprehend the current market and trend
+                 of housing market in a specific city by visualizing data extracted
+                 from house sale posts on Zillow website. Web scraping code obtain
+                 data such as price, size, and number of rooms, which are stored in
+                  SQLite database. This database can be graphed to display the
+                trend over time as well as scatter or bar graph of selected date showing
+                 price vs sqft, average price with respect to number of rooms or
+                 by location.
                </p>
              </div>
              <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
@@ -137,8 +196,22 @@ class Projects extends React.Component {
        </div>
 
        <div className="row space-y-2 mt-4 mx-auto">
-         <h2 className="text-2xl">Accounting Book</h2>
-         <div className="flex flex-col mt-4">
+         <div className="w-full inline-flex h-8 mb-8">
+           <h2 className="text-2xl">Accounting Book</h2>
+           <a
+             className="cursor-pointer h-full w-auto ml-8 float-right"
+             href="https://github.com/bischo91/Finance"
+             target="_blank"
+             rel="noopener noreferrer"
+           >
+             <img
+               src={github_logo}
+               alt="GitHub"
+               className="h-full w-full"
+             />
+           </a>
+         </div>
+         <div className="flex flex-col">
            <div className="w-full mx-auto">
              <AwesomeSlider animation="cubeAnimation">
                <div data-src={accountbook_1} />
@@ -174,11 +247,27 @@ class Projects extends React.Component {
        </div>
 
        <div className="row space-y-2 mt-4 mx-auto">
-         <h2 className="text-2xl">Image Process of Carbon Nanotube</h2>
-         <div className="flex flex-col mt-4">
+         <div className="w-full inline-flex h-8 mb-8">
+           <h2 className="text-2xl">Image Process of Carbon Nanotube</h2>
+           <a
+             className="cursor-pointer h-full w-auto ml-8 float-right"
+             href="https://github.com/bischo91/Image_Analysis"
+             target="_blank"
+             rel="noopener noreferrer"
+           >
+             <img
+               src={github_logo}
+               alt="GitHub"
+               className="h-full w-full"
+             />
+           </a>
+         </div>
+         <div className="flex flex-col">
            <div className="w-full mx-auto">
              <AwesomeSlider animation="cubeAnimation">
                <div data-src={imageprocess_1} />
+               <div data-src={imageprocess_2} />
+               <div data-src={imageprocess_3} />
              </AwesomeSlider>
            </div>
            <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
@@ -212,8 +301,22 @@ class Projects extends React.Component {
        </div>
 
        <div className="row space-y-2 mt-4 mx-auto">
-         <h2 className="text-2xl">Image Process of Display Panels</h2>
-         <div className="flex flex-col mt-4">
+         <div className="w-full inline-flex h-8 mb-8">
+           <h2 className="text-2xl">Image Process of Display Panels</h2>
+           <a
+             className="cursor-pointer h-full w-auto ml-8 float-right"
+             href="https://github.com/bischo91/Image_Analysis"
+             target="_blank"
+             rel="noopener noreferrer"
+           >
+             <img
+               src={github_logo}
+               alt="GitHub"
+               className="h-full w-full"
+             />
+           </a>
+         </div>
+         <div className="flex flex-col">
            <div className="w-full mx-auto">
              <AwesomeSlider animation="cubeAnimation">
                <div data-src={imageanalysis_1} />
