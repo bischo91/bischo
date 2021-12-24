@@ -16,10 +16,12 @@ export const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert("Email sent! Thank you!")
+
         },
         (error) => {
-          console.log(error.text);
+          alert("Something went wrong.\
+          \nPlease send me an email directly at bischo91@gmail.com")
         }
       );
   };

@@ -23,7 +23,9 @@ class About extends React.Component {
     // Hide scroll arrow when the window is too small
     if (window.innerHeight < 720 && window.innerWidth > 639) {
       this.scrollArrow.current.classList.add("hidden");
-    } else{
+    } else if (window.innerHeight < 600) {
+      this.scrollArrow.current.classList.add("hidden");
+    } else {
       this.scrollArrow.current.classList.remove("hidden");
     }
   };
