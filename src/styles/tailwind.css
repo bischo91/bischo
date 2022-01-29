@@ -4,6 +4,7 @@
 
 @tailwind utilities;
 
+
 @layer utilities {
   /* Profil image style and filp properties */
   .flip-content {

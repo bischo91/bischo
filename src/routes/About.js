@@ -54,7 +54,7 @@ class About extends React.Component {
             I'm an enthusiastic developer and an engineer<br></br>
           </p>
         </div>
-        <div className="bottom-0 absolute h-1/6 w-screen" ref={this.scrollArrow}>
+        <div className="bottom-0 absolute h-1/6 w-full" ref={this.scrollArrow}>
           <section className="absolute left-1/2 bottom-24 scroll-arrow flex flex-col">
             <Link
               activeClass="active"
