@@ -1,7 +1,12 @@
 import { Link } from "react-scroll";
-import React, { createRef } from "react";
+import React, { createRef, Component } from "react";
 import github_logo from "../images/github.png";
 import linkedin_logo from "../images/linkedin.png";
+import About from "../routes/About";
+import Projects from "../routes/Projects";
+import Resume from "../routes/Resume";
+import Contact from "../routes/Contact";
+import { Element } from "react-scroll";
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -22,18 +27,22 @@ class Navigation extends React.Component {
 
   handleResize = () => {
     // Move navbar to the top when the window.innerHeight is less than 600.
-    if (window.innerHeight < 600) {
+    if (this.navrepositionRef.current !== null) {
+    if (window.innerHeight < 615) {
       this.navrepositionRef.current.classList.add("top-0");
       this.navrepositionRef.current.classList.remove("-bottom-8", "absolute");
-    } else {
+      } else {
       this.navrepositionRef.current.classList.remove("top-0");
       this.navrepositionRef.current.classList.add("-bottom-8", "absolute");
+      }
     }
   };
 
   handleScroll = () => {
     // Fix navbar to the top once scrolled past first page (client height)
-    const winScroll =
+    console.log(this.navRef.current)
+    if (this.navRef.current !== null) {
+      const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     if (winScroll > document.documentElement.clientHeight) {
       this.navRef.current.classList.add("fixed", "top-0");
@@ -42,10 +51,12 @@ class Navigation extends React.Component {
       this.navRef.current.classList.remove("fixed", "top-0");
       // Unfix navbar from the top
     }
+  }
   };
 
   render() {
     return (
+    <div>
       <div
         className="absolute flex fixed -bottom-16 h-16 z-50 shadow w-full"
         ref={this.navrepositionRef}
@@ -64,6 +75,7 @@ class Navigation extends React.Component {
                   activeClass="active"
                   to="about"
                   spy={true}
+                  hashSpy={true}
                   smooth={true}
                   offset={0}
                   duration={500}
@@ -77,6 +89,7 @@ class Navigation extends React.Component {
                   activeClass="active"
                   to="projects"
                   spy={true}
+                  hashSpy={true}
                   smooth={true}
                   offset={0}
                   duration={500}
@@ -90,6 +103,7 @@ class Navigation extends React.Component {
                   activeClass="active"
                   to="resume"
                   spy={true}
+                  hashSpy={true}
                   smooth={true}
                   offset={0}
                   duration={500}
@@ -103,6 +117,7 @@ class Navigation extends React.Component {
                   activeClass="active"
                   to="contact"
                   spy={true}
+                  hashSpy={true}
                   smooth={true}
                   offset={0}
                   duration={500}
@@ -142,7 +157,23 @@ class Navigation extends React.Component {
             </div>
           </div>
         </div>
+
       </div>
+      <div className="font-mono flex flex-col bg-primary">
+        <Element name="about" className="element" id="aboutId">
+          <About />
+        </Element>
+        <Element name="projects" className="element">
+          <Projects />
+        </Element>
+        <Element name="resume" className="element">
+          <Resume />
+        </Element>
+        <Element name="contact" className="element">
+          <Contact />
+        </Element>
+      </div>
+    </div>
     );
   }
 }

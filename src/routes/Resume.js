@@ -1,7 +1,5 @@
 import React from "react";
 import resume from "../images/resume.jpg";
-// import resume_pdf from "../pdf/resume.pdf";
-// href={resume_pdf}
 
 class Resume extends React.Component {
   componentDidMount() {}
@@ -12,7 +10,7 @@ class Resume extends React.Component {
         <h1 className="text-4xl mb-8">RESUME</h1>
         <div className="row space-y-4 mt-8">
           <a
-            href="https://drive.google.com/file/d/1bCkTmZ4fPy7c-nezTX2gvuxuXDQjrFvl/view?usp=sharing"
+            href="https://drive.google.com/file/d/1N1kal9F4D_Z0rSWkmzuM9w2KE2ardnGn/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer">
             <img

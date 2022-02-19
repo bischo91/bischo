@@ -1,8 +1,10 @@
 import React from "react";
 import AwesomeSlider from "react-awesome-slider";
+// import { Link } from 'react-router-dom'
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 
+import cryptosearch_1 from "../images/crypto_search.png";
 import lennyspizza_1 from "../images/lennyspizza_project.png";
 import lennyspizza_2 from "../images/lennyspizza_menu_PC.png";
 import lennyspizza_3 from "../images/lennyspizza_location_mobile.png";
@@ -29,12 +31,45 @@ import imageprocess_3 from "../images/imageanalysis_imageprocess_3.jpg";
 
 import github_logo from "../images/github_white.png";
 
-class Projects extends React.Component {
+import { Link } from "react-router-dom";
 
+class Projects extends React.Component {
   render() {
    return (
      <div className="text-primary flex-col w-5/6 md:w-2/3 m-auto mt-24 min-h-screen bg-primary">
        <h1 className="text-4xl mb-8">PROJECTS</h1>
+         <div className="row space-y-2 mt-4 mx-auto">
+           <div className="w-full inline-flex h-8 mb-8">
+             <h2 className="text-2xl">Crypto Search</h2>
+           </div>
+           <div className="flex flex-col">
+             <div className="w-full mx-auto">
+               <AwesomeSlider animation="cubeAnimation">
+                 <div data-src={cryptosearch_1} />
+               </AwesomeSlider>
+             </div>
+             <div className="w-full mx-auto flex flex-col mt-16 mb-20 lg:flex-row ">
+               <div className="w-full mx-3 text-md my-5 lg:w-3/4 p-2">
+                 <h3 className="text-lg">About Project</h3>
+                 <p className="w-full mx-auto text-md">
+                   I built a Javascript-based web application to obtain live
+                   market information on over 400 cryptocurrencies
+                   from Binance API. Data such as price, volume, price high/low,
+                   etc. of the selected/searched coin will be shown in USD or BTC.<br></br>
+                 Click <Link className="underline" to="/cryptosearch">here</Link> for demo.
+                 </p>
+               </div>
+               <div className="w-full mx-3 my-5 lg:w-1/4 p-2">
+                 <h3 className="text-lg">Technical Sheet</h3>
+                 <ul className="list-disc">
+                   <li>React</li>
+                   <li>REST API</li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+
        <div className="row space-y-2 mt-4 mx-auto">
          <div className="w-full inline-flex h-8 mb-8">
            <h2 className="text-2xl">Lenny's Pizza Website</h2>
@@ -89,7 +124,6 @@ class Projects extends React.Component {
            </div>
          </div>
        </div>
-
        <div className="row space-y-2 mt-4 mx-auto">
          <div className="w-full inline-flex h-8 mb-8">
            <h2 className="text-2xl">Parfaitlyme</h2>
