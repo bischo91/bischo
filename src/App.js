@@ -11,12 +11,8 @@ class App extends Component {
     window.scrollTo(0, 0);
     // Chnage page title to Brian Cho
     document.title = "Brian Cho";
-    // console.log(cryptoSearchApp)
   }
 
-// <Route path="/cryptosearch" render ={() <CryptoSearchApp />} />
-  // </Route> component={cryptoSearchApp} />
-  // <Route exact path="/about" element={<About />} />
   render() {
     return (
       <div className="font-mono flex flex-col bg-primary">

@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import React, { createRef, Component } from "react";
+import React, { createRef } from "react";
 import github_logo from "../images/github.png";
 import linkedin_logo from "../images/linkedin.png";
 import About from "../routes/About";

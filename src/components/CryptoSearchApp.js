@@ -1,5 +1,4 @@
 import "./styles.css";
-import { render } from "react-dom";
 import { tickerInfo } from "./DataAPI";
 import React, { Component } from "react";
 import Select from "react-select";

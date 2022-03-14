@@ -20,8 +20,7 @@ export const ContactForm = () => {
 
         },
         (error) => {
-          alert("Something went wrong.\
-          \nPlease send me an email directly at bischo91@gmail.com")
+          alert("Something went wrong.\n Please send me an email directly at bischo91@gmail.com")
         }
       );
   };
