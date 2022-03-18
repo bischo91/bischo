@@ -12,11 +12,12 @@ class Resume extends React.Component {
           <a
             href="https://drive.google.com/file/d/1N1kal9F4D_Z0rSWkmzuM9w2KE2ardnGn/view?usp=sharing"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             <img
               src={resume}
               alt="Resume"
-              className="max-w-max w-full m-auto"
+              className="m-auto w-full xl:w-2/3 2xl:w-1/2"
             />
           </a>
         </div>

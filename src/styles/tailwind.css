@@ -4,8 +4,25 @@
 
 @tailwind utilities;
 
-
 @layer utilities {
+  /* Arrows */
+  .arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid white;
+  }
+  .left {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transition: transform 0.25s;
+  }
+  .down {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transition: transform 0.25s;
+  }
   /* Profil image style and filp properties */
   .flip-content {
     width: 100%;
