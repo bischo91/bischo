@@ -9,19 +9,21 @@
   .arrow {
     width: 0;
     height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 15px solid white;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    border-color: white;
   }
-  .left {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transition: transform 0.25s;
+  .up {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    transition: transform 0.5s;
   }
   .down {
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transition: transform 0.25s;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: transform 0.5s;
   }
   /* Profil image style and filp properties */
   .flip-content {

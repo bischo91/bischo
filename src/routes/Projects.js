@@ -67,7 +67,7 @@ class Projects extends React.Component {
             <div className="inline-flex m-auto mr-6">
               <i
                 className={
-                  this.state.collapsible[0] ? "arrow down" : "arrow left"
+                  this.state.collapsible[0] ? "arrow up" : "arrow down"
                 }
               ></i>
             </div>
@@ -125,7 +125,7 @@ class Projects extends React.Component {
             <div className="inline-flex m-auto mr-6">
               <i
                 className={
-                  this.state.collapsible[1] ? "arrow down" : "arrow left"
+                  this.state.collapsible[1] ? "arrow up" : "arrow down"
                 }
               ></i>
             </div>
@@ -203,7 +203,7 @@ class Projects extends React.Component {
             <div className="inline-flex m-auto mr-6">
               <i
                 className={
-                  this.state.collapsible[2] ? "arrow down" : "arrow left"
+                  this.state.collapsible[2] ? "arrow up" : "arrow down"
                 }
               ></i>
             </div>
@@ -269,7 +269,7 @@ class Projects extends React.Component {
             <div className="inline-flex m-auto mr-6">
               <i
                 className={
-                  this.state.collapsible[3] ? "arrow down" : "arrow left"
+                  this.state.collapsible[3] ? "arrow up" : "arrow down"
                 }
               ></i>
             </div>
@@ -348,7 +348,7 @@ class Projects extends React.Component {
             <div className="inline-flex m-auto mr-6">
               <i
                 className={
-                  this.state.collapsible[4] ? "arrow down" : "arrow left"
+                  this.state.collapsible[4] ? "arrow up" : "arrow down"
                 }
               ></i>
             </div>
@@ -426,7 +426,7 @@ class Projects extends React.Component {
             <div className="inline-flex m-auto mr-6">
               <i
                 className={
-                  this.state.collapsible[5] ? "arrow down" : "arrow left"
+                  this.state.collapsible[5] ? "arrow up" : "arrow down"
                 }
               ></i>
             </div>
@@ -506,7 +506,7 @@ class Projects extends React.Component {
             <div className="inline-flex m-auto mr-6">
               <i
                 className={
-                  this.state.collapsible[6] ? "arrow down" : "arrow left"
+                  this.state.collapsible[6] ? "arrow up" : "arrow down"
                 }
               ></i>
             </div>
