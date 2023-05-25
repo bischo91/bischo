@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="flex flex-col font-mono bg-primary">
         <Routes>
-          <Route path="/cryptosearch" element={<CryptoSearchApp />} />
+          {/* <Route path="/cryptosearch" element={<CryptoSearchApp />} /> */}
         </Routes>
         <Routes>
           <Route path="/" element={<Navigation />} />
