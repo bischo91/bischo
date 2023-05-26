@@ -1,16 +1,15 @@
 module.exports = {
-  purge: false, // was []
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    backgroundColor: theme => ({
-      ...theme('colors'),
-      'primary': '#2f2f2f',
-      'secondary': '#6a6a6a',
-        }
-    ),
+    backgroundColor: (theme) => ({
+      ...theme("colors"),
+      primary: "#2f2f2f",
+      secondary: "#6a6a6a",
+    }),
     textColor: {
-      'primary': '#ffffff',
-      'secondary': '#ffffff',
+      primary: "#ffffff",
+      secondary: "#ffffff",
     },
     extend: {},
   },
@@ -18,4 +17,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
