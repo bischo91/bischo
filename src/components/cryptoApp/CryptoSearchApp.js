@@ -1,4 +1,3 @@
-import { render } from "react-dom";
 import { tickerInfo, options } from "./DataAPI";
 import React, { Component } from "react";
 import Select from "react-select";
@@ -15,7 +14,7 @@ class CryptoSearchApp extends Component {
         volume: "",
         priceOpen: "",
         priceHigh: "",
-        priceLow: ""
+        priceLow: "",
       },
       BTC: {
         symbol: "",
@@ -24,9 +23,9 @@ class CryptoSearchApp extends Component {
         volume: "",
         priceOpen: "",
         priceHigh: "",
-        priceLow: ""
+        priceLow: "",
       },
-      updateTime: ""
+      updateTime: "",
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -51,7 +50,7 @@ class CryptoSearchApp extends Component {
         volume: "Volume: " + Number(rawData[1].volume).toFixed(2),
         priceOpen: "Price Open: " + rawData[1].openPrice,
         priceHigh: "Price High: " + rawData[1].highPrice,
-        priceLow: "Price Low: " + rawData[1].lowPrice
+        priceLow: "Price Low: " + rawData[1].lowPrice,
       },
       BTC: {
         symbol: e.value + "=> BTC",
@@ -65,19 +64,22 @@ class CryptoSearchApp extends Component {
         volume: "Volume: " + Number(rawData[0].volume).toFixed(2),
         priceOpen: "Price Open: " + rawData[0].openPrice + "BTC",
         priceHigh: "Price High: " + rawData[0].highPrice + "BTC",
-        priceLow: "Price Low: " + rawData[0].lowPrice + "BTC"
-      }
+        priceLow: "Price Low: " + rawData[0].lowPrice + "BTC",
+      },
     });
   }
 
   render() {
     return (
       <div className="App">
-        <div className="bg-primary min-h-screen h-full">
-          <Link to="/"><button className="fixed px-2 py-1 left-3 top-3 text-primary text-lg bg-secondary rounded-lg">&lt;&lt; BACK</button>
+        <div className="h-full min-h-screen bg-primary">
+          <Link to="/">
+            <button className="fixed px-2 py-1 text-lg rounded-lg left-3 top-3 text-primary bg-secondary">
+              &lt;&lt; BACK
+            </button>
           </Link>
-          <div className="w-5/6 m-auto pt-12 ">
-            <h1 className="m-auto my-12 text-center text-primary text-2xl">
+          <div className="w-5/6 pt-12 m-auto ">
+            <h1 className="m-auto my-12 text-2xl text-center text-primary">
               Search Cryptocurrency
             </h1>
             <div>
@@ -92,8 +94,8 @@ class CryptoSearchApp extends Component {
               </span>
             </div>
 
-            <div className="mt-4 inline-grid w-1/2 h-full">
-              <ol className="text-primary text-sm md:text-md lg:text-lg">
+            <div className="inline-grid w-1/2 h-full mt-4">
+              <ol className="text-sm text-primary md:text-md lg:text-lg">
                 {this.state.USD.symbol}
                 <li>{this.state.USD.price} </li>
                 <li>{this.state.USD.priceChange} </li>
@@ -104,7 +106,7 @@ class CryptoSearchApp extends Component {
               </ol>
             </div>
             <div className="inline-grid w-1/2 h-full">
-              <ol className="text-primary text-sm md:text-md lg:text-lg">
+              <ol className="text-sm text-primary md:text-md lg:text-lg">
                 {this.state.BTC.symbol}
                 <li>{this.state.BTC.price} </li>
                 <li>{this.state.BTC.priceChange} </li>
