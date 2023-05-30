@@ -16,11 +16,11 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install pnpm packages
-        run: pnpm install
+      - name: Install Yarn packages
+        run: yarn install
 
       - name: Build project
-        run: pnpm run build
+        run: yarn run build
 
       # - name: Run tests
       #   run: npm run test
