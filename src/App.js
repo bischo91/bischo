@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./styles/tailwind.css";
 import Navigation from "./components/Navigation";
 import { Route, Routes } from "react-router-dom";
-import CryptoSearchApp from "./components/cryptoApp/CryptoSearchApp";
+// import CryptoSearchApp from "./components/cryptoApp/CryptoSearchApp";
 
 class App extends Component {
   componentDidMount() {
@@ -15,9 +15,9 @@ class App extends Component {
   render() {
     return (
       <div className="flex flex-col font-mono bg-primary">
-        <Routes>
+        {/* <Routes>
           <Route path="/cryptosearch" element={<CryptoSearchApp />} />
-        </Routes>
+        </Routes> */}
         <Routes>
           <Route path="/" element={<Navigation />} />
         </Routes>
