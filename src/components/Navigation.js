@@ -14,6 +14,7 @@ class Navigation extends React.Component {
     super(props);
     this.navRef = createRef();
     this.navrepositionRef = createRef();
+    this.state = { hash: window.location.hash };
   }
 
   componentDidMount() {
@@ -25,6 +26,10 @@ class Navigation extends React.Component {
     window.addEventListener("resize", this.handleResize);
     this.handleResize();
   }
+
+  handleSetActive = () => {
+    this.setState({ hash: window.location.hash });
+  };
 
   handleResize = () => {
     // Move navbar to the top when the window.innerHeight is less than 600.
@@ -163,7 +168,7 @@ class Navigation extends React.Component {
             <About />
           </Element>
           <Element name="projects" className="element">
-            <Projects />
+            <Projects showSubnav={this.state.hash.includes("projects")} />
           </Element>
           <Element name="resume" className="element">
             <Resume />

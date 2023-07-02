@@ -1,5 +1,16 @@
 <br />
 
+## [0.3.0] - 2023-07-02
+
+### Added
+
+- Subnav for project section to scroll and focus the project
+- Project container to refactor project and subnav
+
+### Removed
+
+- Old project contents
+
 ## [0.2.0] - 2023-07-01
 
 ### Removed
