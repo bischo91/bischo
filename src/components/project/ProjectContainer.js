@@ -1,6 +1,5 @@
-import React, { createRef } from "react";
-
 import AwesomeSlider from "react-awesome-slider";
+import React from "react";
 import github_logo from "../../images/github_white.png";
 
 class ProjectContainer extends React.Component {
