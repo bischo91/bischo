@@ -52,7 +52,7 @@ class About extends React.Component {
           </div>
         </div>
         <div className="h-full mx-4 mt-24 bg-primary sm:mt-16">
-          <p className="text-sm text-center text-primary sm:text-lg md:text-xl lg:text-2xl">
+          <p className="font-mono text-sm text-center text-primary sm:text-lg md:text-xl lg:text-2xl">
             Hello World! <br></br>
             I'm Brian.<br></br>
             I'm an enthusiastic developer and an engineer<br></br>

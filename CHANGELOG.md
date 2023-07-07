@@ -1,6 +1,16 @@
 <br />
 
-## [0.3.1] - 2023-07-07
+## [0.3.2] - 2023-07-07
+
+### Changed
+
+- Hosting on a new Firestore proejct
+- Font change (added custom font)
+- Some design, layout
+
+### Added
+
+- New project (Autonomous RC Car)
 
 ### Fixed
 
