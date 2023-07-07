@@ -42,8 +42,8 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FORUM_MMA }}"
-          projectId: forum-mma
+          firebaseServiceAccount: "${{ secrets.FREBASE_SERVICE_ACCOUNT_BRIAN_CHO }}"
+          projectId: brian-cho
           channelId: preview
           expires: 30d
         env:
