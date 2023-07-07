@@ -1,5 +1,11 @@
 <br />
 
+## [0.3.1] - 2023-07-07
+
+### Fixed
+
+- AwesomeSlider image cropped (object-fit: contain)
+
 ## [0.3.0] - 2023-07-02
 
 ### Added

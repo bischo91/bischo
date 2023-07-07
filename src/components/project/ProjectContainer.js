@@ -4,6 +4,11 @@ import github_logo from "../../images/github_white.png";
 
 class ProjectContainer extends React.Component {
   render() {
+    const styles = `
+    .awssld__content > img {
+      object-fit: contain;
+    }
+    `;
     return (
       <div className="mx-auto space-y-2">
         <div className="inline-flex w-full h-8 m-4 mt-24">
@@ -12,11 +17,9 @@ class ProjectContainer extends React.Component {
           </h2>
         </div>
         {this.props.project?.imageSrc?.length > 0 && (
-          <div className="flex w-full mx-auto my-4 lg:w-5/6">
-            <AwesomeSlider
-              animation="cubeAnimation"
-              className="object-scale-down"
-            >
+          <div className="flex w-full h-full mx-auto my-4 lg:w-5/6">
+            <style>{styles}</style>
+            <AwesomeSlider animation="cubeAnimation">
               {this.props.project?.imageSrc.map((imageSrc) => (
                 <div data-src={imageSrc} />
               ))}
