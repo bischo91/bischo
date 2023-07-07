@@ -4,7 +4,7 @@
 
 ### Changed
 
-- Hosting on a new Firestore proejct
+- Hosting on a new Firestore proejct (brian-cho)
 - Font change (added custom font)
 - Some design, layout
 
