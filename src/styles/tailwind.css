@@ -123,15 +123,4 @@
       opacity: 0;
     }
   }
-  /* Slider */
-  /* .awssld
-    > .awssld__wrapper
-    > .awssld__container
-    > .awssld__box
-    > .awssld__content
-    > img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: scale-down !important;
-  } */
 }

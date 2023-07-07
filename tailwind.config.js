@@ -11,7 +11,12 @@ module.exports = {
       primary: "#ffffff",
       secondary: "#ffffff",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto"],
+        openSans: ["Open Sans"],
+      },
+    },
   },
   variants: {
     extend: {},

@@ -66,7 +66,7 @@ class Navigation extends React.Component {
     return (
       <div>
         <div
-          className="z-50 flex w-full h-16 shadow "
+          className="z-50 flex w-full h-16 font-mono shadow"
           ref={this.navrepositionRef}
         >
           <div
@@ -163,7 +163,7 @@ class Navigation extends React.Component {
             </div>
           </div>
         </div>
-        <div className="flex flex-col font-mono bg-primary">
+        <div className="flex flex-col bg-primary">
           <Element name="about" className="element" id="aboutId">
             <About />
           </Element>
