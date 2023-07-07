@@ -1,6 +1,5 @@
 {
   "projects": {
-    "default": "brian-cho",
-    "dev": "forum-mma"
+    "default": "brian-cho"
   }
 }
