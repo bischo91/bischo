@@ -25,3 +25,5 @@ yarn-error.log*
 pnpm-lock.yaml
 /firebase
 .firebase/*
+
+*.log
