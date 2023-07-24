@@ -37,7 +37,7 @@ class ProjectContainer extends React.Component {
             <style>{styles}</style>
             <AwesomeSlider animation="cubeAnimation" className="my-4">
               {this.props.project?.imageSrc.map((imageSrc) => (
-                <div data-src={imageSrc} />
+                <div data-src={imageSrc} poster={github_logo} />
               ))}
             </AwesomeSlider>
           </div>
