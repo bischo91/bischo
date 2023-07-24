@@ -6,8 +6,8 @@ import { Element } from "react-scroll";
 import { Link } from "react-scroll";
 import Projects from "../routes/Projects";
 import Resume from "../routes/Resume";
-import github_logo from "../images/github.png";
-import linkedin_logo from "../images/linkedin.png";
+import github_logo from "../asset/github.png";
+import linkedin_logo from "../asset/linkedin.png";
 
 class Navigation extends React.Component {
   constructor(props) {

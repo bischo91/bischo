@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../images/resume.jpg";
+import resume from "../asset/resume.jpg";
 
 class Resume extends React.Component {
   componentDidMount() {}

@@ -1,26 +1,29 @@
-import accountbook_1 from "../../images/accountbook_monthly.png";
-import accountbook_2 from "../../images/accountbook_trend.png";
-import autonomouscar_1 from "../../images/autonomous_rc_car_manual.mp4";
-import autonomouscar_2 from "../../images/autonomous_car_autonomous.mp4";
-import imageanalysis_1 from "../../images/imageanalysis_panellevel.jpg";
-import imageanalysis_2 from "../../images/imageanalysis_pixellevel.png";
-import imageanalysis_3 from "../../images/imageanalysis_pixeluniformity.png";
-import imageprocess_1 from "../../images/imageanalysis_imageprocess_1.jpg";
-import imageprocess_2 from "../../images/imageanalysis_imageprocess_2.jpg";
-import imageprocess_3 from "../../images/imageanalysis_imageprocess_3.jpg";
-import lennyspizza_1 from "../../images/lennyspizza_project.png";
-import lennyspizza_2 from "../../images/lennyspizza_menu_PC.png";
-import lennyspizza_3 from "../../images/lennyspizza_location_mobile.png";
-import lennyspizza_4 from "../../images/lennyspizza_promotion_tablet.png";
-import zillowscrape_1 from "../../images/zillow_trend.png";
-import zillowscrape_2 from "../../images/zillow_scatter.png";
-import zillowscrape_3 from "../../images/zillow_bar.png";
+import accountbook_1 from "../../asset/accountbook_monthly.png";
+import accountbook_2 from "../../asset/accountbook_trend.png";
+import autonomouscar_1 from "../../asset/autonomous_car_autonomous.mp4";
+import autonomouscar_2 from "../../asset/autonomous_rc_car_manual.mp4";
+import autonomouscar_preview_1 from "../../asset/autonomous_car_autonomous.png";
+import autonomouscar_preview_2 from "../../asset/autonomous_rc_car_manual.png";
+import imageanalysis_1 from "../../asset/imageanalysis_panellevel.jpg";
+import imageanalysis_2 from "../../asset/imageanalysis_pixellevel.png";
+import imageanalysis_3 from "../../asset/imageanalysis_pixeluniformity.png";
+import imageprocess_1 from "../../asset/imageanalysis_imageprocess_1.jpg";
+import imageprocess_2 from "../../asset/imageanalysis_imageprocess_2.jpg";
+import imageprocess_3 from "../../asset/imageanalysis_imageprocess_3.jpg";
+import lennyspizza_1 from "../../asset/lennyspizza_project.png";
+import lennyspizza_2 from "../../asset/lennyspizza_menu_PC.png";
+import lennyspizza_3 from "../../asset/lennyspizza_location_mobile.png";
+import lennyspizza_4 from "../../asset/lennyspizza_promotion_tablet.png";
+import zillowscrape_1 from "../../asset/zillow_trend.png";
+import zillowscrape_2 from "../../asset/zillow_scatter.png";
+import zillowscrape_3 from "../../asset/zillow_bar.png";
 
 const ProjectContents = [
   {
     id: 6,
     title: "Autonomous RC Car",
-    imageSrc: [autonomouscar_2, autonomouscar_1],
+    imageSrc: [autonomouscar_1, autonomouscar_2],
+    previewSrc: [autonomouscar_preview_1, autonomouscar_preview_2],
     gitHubLink: "https://github.com/bischo91/autonomous-rc-car",
     description:
       "I built an autonomous RC car using an Arduino board with self-drive and remote-control modes, utilizing a Bluetooth connection. The car incorporated a proximity sensor to enable obstacle avoidance by intelligently steering towards clearer paths",
