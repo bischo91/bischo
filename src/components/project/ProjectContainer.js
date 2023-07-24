@@ -37,7 +37,22 @@ class ProjectContainer extends React.Component {
             <style>{styles}</style>
             <AwesomeSlider animation="cubeAnimation" className="my-4">
               {this.props.project?.imageSrc.map((imageSrc) => (
-                <div data-src={imageSrc} poster={github_logo} />
+                // <div data-src={imageSrc} poster={github_logo} >
+                <div className="h-full">
+                  {imageSrc.split(".")[imageSrc.split(".").length - 1] ===
+                  "mp4" ? (
+                    <video className="h-full" controls>
+                      <source
+                        src={imageSrc}
+                        poster={github_logo}
+                        className="h-full"
+                        type="video/mp4"
+                      />
+                    </video>
+                  ) : (
+                    <img src={imageSrc} className="h-full" />
+                  )}
+                </div>
               ))}
             </AwesomeSlider>
           </div>
