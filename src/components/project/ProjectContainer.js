@@ -44,6 +44,8 @@ class ProjectContainer extends React.Component {
                     <video
                       className="h-full"
                       controls
+                      disablePictureInPicture
+                      controlsList="nodownload"
                       poster={this.props.project.previewSrc[index]}
                     >
                       <source

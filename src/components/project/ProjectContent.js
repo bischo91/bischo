@@ -1,9 +1,9 @@
 import accountbook_1 from "../../asset/accountbook_monthly.png";
 import accountbook_2 from "../../asset/accountbook_trend.png";
-import autonomouscar_1 from "../../asset/autonomous_car_autonomous.mp4";
-import autonomouscar_2 from "../../asset/autonomous_rc_car_manual.mp4";
-import autonomouscar_preview_1 from "../../asset/autonomous_car_autonomous.png";
-import autonomouscar_preview_2 from "../../asset/autonomous_rc_car_manual.png";
+import autonomous_car_1 from "../../asset/autonomous_car_autonomous.mp4";
+import autonomous_car_2 from "../../asset/autonomous_rc_car_manual.mp4";
+import autonomous_car_preview_1 from "../../asset/autonomous_car_autonomous.png";
+import autonomous_car_preview_2 from "../../asset/autonomous_rc_car_manual.png";
 import imageanalysis_1 from "../../asset/imageanalysis_panellevel.jpg";
 import imageanalysis_2 from "../../asset/imageanalysis_pixellevel.png";
 import imageanalysis_3 from "../../asset/imageanalysis_pixeluniformity.png";
@@ -22,8 +22,8 @@ const ProjectContents = [
   {
     id: 6,
     title: "Autonomous RC Car",
-    imageSrc: [autonomouscar_1, autonomouscar_2],
-    previewSrc: [autonomouscar_preview_1, autonomouscar_preview_2],
+    imageSrc: [autonomous_car_1, autonomous_car_2],
+    previewSrc: [autonomous_car_preview_1, autonomous_car_preview_2],
     gitHubLink: "https://github.com/bischo91/autonomous-rc-car",
     description:
       "I built an autonomous RC car using an Arduino board with self-drive and remote-control modes, utilizing a Bluetooth connection. The car incorporated a proximity sensor to enable obstacle avoidance by intelligently steering towards clearer paths",
