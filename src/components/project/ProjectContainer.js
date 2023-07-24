@@ -53,7 +53,11 @@ class ProjectContainer extends React.Component {
                       />
                     </video>
                   ) : (
-                    <img src={imageSrc} className="h-full" />
+                    <img
+                      src={imageSrc}
+                      className="h-full"
+                      alt={this.props.project.title}
+                    />
                   )}
                 </div>
               ))}
