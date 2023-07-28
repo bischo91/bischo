@@ -1,5 +1,11 @@
 <br />
 
+## [0.3.3] - 2023-07-24
+
+### Added
+
+- RC car video for RC car project
+
 ## [0.3.2] - 2023-07-07
 
 ### Changed

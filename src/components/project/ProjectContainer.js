@@ -2,7 +2,7 @@ import "../../styles/CustomFont.css";
 
 import AwesomeSlider from "react-awesome-slider";
 import React from "react";
-import github_logo from "../../images/github_white.png";
+import github_logo from "../../asset/github_white.png";
 
 class ProjectContainer extends React.Component {
   render() {
@@ -36,8 +36,32 @@ class ProjectContainer extends React.Component {
           <div className="flex w-full h-full mx-auto lg:w-5/6">
             <style>{styles}</style>
             <AwesomeSlider animation="cubeAnimation" className="my-4">
-              {this.props.project?.imageSrc.map((imageSrc) => (
-                <div data-src={imageSrc} />
+              {this.props.project?.imageSrc.map((imageSrc, index) => (
+                // <div data-src={imageSrc} poster={github_logo} >
+                <div className="h-full">
+                  {imageSrc.split(".")[imageSrc.split(".").length - 1] ===
+                  "mp4" ? (
+                    <video
+                      className="h-full"
+                      controls
+                      disablePictureInPicture
+                      controlsList="nodownload"
+                      poster={this.props.project.previewSrc[index]}
+                    >
+                      <source
+                        src={imageSrc}
+                        className="h-full"
+                        type="video/mp4"
+                      />
+                    </video>
+                  ) : (
+                    <img
+                      src={imageSrc}
+                      className="h-full"
+                      alt={this.props.project.title}
+                    />
+                  )}
+                </div>
               ))}
             </AwesomeSlider>
           </div>

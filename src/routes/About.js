@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import React from "react";
-import profile_animated from "../images/profile_animated.png";
-import profile_pic from "../images/profile.png";
+import profile_animated from "../asset/profile_animated.png";
+import profile_pic from "../asset/profile.png";
 
 class About extends React.Component {
   constructor(props) {
