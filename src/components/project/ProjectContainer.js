@@ -35,7 +35,15 @@ class ProjectContainer extends React.Component {
         {this.props.project?.imageSrc?.length > 0 && (
           <div className="flex w-full h-full mx-auto lg:w-5/6">
             <style>{styles}</style>
-            <AwesomeSlider animation="cubeAnimation" className="my-4">
+            <AwesomeSlider
+              animation="cubeAnimation"
+              className="my-4"
+              onTransitionRequest={() => {
+                document
+                  .querySelectorAll("video")
+                  .forEach((vid) => vid.pause());
+              }}
+            >
               {this.props.project?.imageSrc.map((imageSrc, index) => (
                 // <div data-src={imageSrc} poster={github_logo} >
                 <div className="h-full">
