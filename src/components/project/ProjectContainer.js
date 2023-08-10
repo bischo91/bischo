@@ -21,7 +21,7 @@ class ProjectContainer extends React.Component {
                 className="m-auto ml-4 cursor-pointer"
                 href={this.props.project?.gitHubLink}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 <img
                   src={github_logo}
