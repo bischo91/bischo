@@ -86,6 +86,7 @@ class ProjectContainer extends React.Component {
                 <span>Click </span>
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   className="underline hover:text-secondary"
                   href={this.props.project.demoLink}
                 >
