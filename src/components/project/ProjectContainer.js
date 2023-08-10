@@ -81,6 +81,19 @@ class ProjectContainer extends React.Component {
                   </React.Fragment>
                 ))}
             </p>
+            {this.props.project?.demoLink && (
+              <div>
+                <span>Click </span>
+                <a
+                  target="_blank"
+                  className="underline hover:text-secondary"
+                  href={this.props.project.demoLink}
+                >
+                  here
+                </a>
+                <span> for a demo.</span>
+              </div>
+            )}
           </div>
           {this.props.project?.techStack?.length > 0 && (
             <div className="w-full p-2 mx-3 mt-10 lg:w-1/4">
