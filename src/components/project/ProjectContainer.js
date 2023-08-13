@@ -21,7 +21,7 @@ class ProjectContainer extends React.Component {
                 className="m-auto ml-4 cursor-pointer"
                 href={this.props.project?.gitHubLink}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
               >
                 <img
                   src={github_logo}
@@ -35,7 +35,15 @@ class ProjectContainer extends React.Component {
         {this.props.project?.imageSrc?.length > 0 && (
           <div className="flex w-full h-full mx-auto lg:w-5/6">
             <style>{styles}</style>
-            <AwesomeSlider animation="cubeAnimation" className="my-4">
+            <AwesomeSlider
+              animation="cubeAnimation"
+              className="my-4"
+              onTransitionRequest={() => {
+                document
+                  .querySelectorAll("video")
+                  .forEach((vid) => vid.pause());
+              }}
+            >
               {this.props.project?.imageSrc.map((imageSrc, index) => (
                 // <div data-src={imageSrc} poster={github_logo} >
                 <div className="h-full">
@@ -81,6 +89,20 @@ class ProjectContainer extends React.Component {
                   </React.Fragment>
                 ))}
             </p>
+            {this.props.project?.demoLink && (
+              <div>
+                <span>Click </span>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-secondary"
+                  href={this.props.project.demoLink}
+                >
+                  here
+                </a>
+                <span> for a demo.</span>
+              </div>
+            )}
           </div>
           {this.props.project?.techStack?.length > 0 && (
             <div className="w-full p-2 mx-3 mt-10 lg:w-1/4">

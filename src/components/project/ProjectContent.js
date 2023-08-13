@@ -20,6 +20,22 @@ import zillowscrape_3 from "../../asset/zillow_bar.png";
 
 const ProjectContents = [
   {
+    id: 7,
+    title: "Weight Lift Counter",
+    imageSrc: [],
+    // previewSrc: [],
+    gitHubLink: "https://github.com/bischo91/do-you-lift",
+    description:
+      "I developed a web application that connects to a web/mobile camera to count reps for various workouts in real time. Body points are detected by pose estimation package, Mediapipe, and angles are calculated based on the body points. This real-time video can also be recorded and downloaded by a user.",
+    techStack: [
+      {
+        language: "Typescript",
+        packages: ["Mediapipe, React, TailwindCSS"],
+      },
+    ],
+    demoLink: "https://do-you-lift-app.web.app/",
+  },
+  {
     id: 6,
     title: "Autonomous RC Car",
     imageSrc: [autonomous_car_1, autonomous_car_2],
