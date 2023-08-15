@@ -4,6 +4,12 @@ import autonomous_car_1 from "../../asset/autonomous_car_autonomous.mp4";
 import autonomous_car_2 from "../../asset/autonomous_rc_car_manual.mp4";
 import autonomous_car_preview_1 from "../../asset/autonomous_car_autonomous.png";
 import autonomous_car_preview_2 from "../../asset/autonomous_rc_car_manual.png";
+import do_you_lift_1 from "../../asset/do_you_lift_1.mp4";
+import do_you_lift_2 from "../../asset/do_you_lift_2.mp4";
+import do_you_lift_3 from "../../asset/do_you_lift_3.mp4";
+import do_you_lift_preview_1 from "../../asset/do_you_lift_preview_1.png";
+import do_you_lift_preview_2 from "../../asset/do_you_lift_preview_2.png";
+import do_you_lift_preview_3 from "../../asset/do_you_lift_preview_3.png";
 import imageanalysis_1 from "../../asset/imageanalysis_panellevel.jpg";
 import imageanalysis_2 from "../../asset/imageanalysis_pixellevel.png";
 import imageanalysis_3 from "../../asset/imageanalysis_pixeluniformity.png";
@@ -22,8 +28,12 @@ const ProjectContents = [
   {
     id: 7,
     title: "Weight Lift Counter",
-    imageSrc: [],
-    // previewSrc: [],
+    imageSrc: [do_you_lift_1, do_you_lift_2, do_you_lift_3],
+    previewSrc: [
+      do_you_lift_preview_1,
+      do_you_lift_preview_2,
+      do_you_lift_preview_3,
+    ],
     gitHubLink: "https://github.com/bischo91/do-you-lift",
     description:
       "I developed a web application that connects to a web/mobile camera to count reps for various workouts in real time. Body points are detected by pose estimation package, Mediapipe, and angles are calculated based on the body points. This real-time video can also be recorded and downloaded by a user.",
