@@ -1,25 +1,17 @@
 import React from "react";
-import resume from "../asset/resume.jpg";
 
 class Resume extends React.Component {
   componentDidMount() {}
 
   render() {
     return (
-      <div className="w-5/6 h-full min-h-screen m-auto mt-24 md:w-2/3 bg-primary text-primary">
-        <h1 className="mb-8 font-mono text-4xl">RESUME</h1>
-        <div className="mt-8 space-y-4 row">
-          <a
-            href="https://drive.google.com/file/d/1N1kal9F4D_Z0rSWkmzuM9w2KE2ardnGn/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={resume}
-              alt="Resume"
-              className="w-full m-auto xl:w-2/3 2xl:w-1/2"
-            />
-          </a>
+      <div className="relative flex-col w-full min-h-screen mx-auto mt-24 sm:w-3/4 text-primary bg-primary">
+        <h1 className="px-2 mb-8 font-mono text-4xl">RESUME</h1>
+        <div className="space-y-4 sm:-ml-4 row">
+          <iframe
+            src="https://drive.google.com/file/d/1QW0Az1AvOdzulRqyY0XDTCKrFNTMl__9/preview"
+            className="w-[90vw] aspect-[2/3] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[40vw] max-h-screen"
+          />
         </div>
       </div>
     );

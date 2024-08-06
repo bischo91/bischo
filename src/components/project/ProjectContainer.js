@@ -14,7 +14,7 @@ class ProjectContainer extends React.Component {
     return (
       <div className="mx-auto space-y-2">
         <div className="inline-flex w-full h-8 mx-2 mt-16">
-          <h2 className="my-4 font-mono text-2xl lg:text-2xl md:text-3xl">
+          <h2 className="px-1 my-4 font-mono text-2xl lg:text-2xl md:text-3xl">
             {this.props.project?.title}
             {this.props.project?.gitHubLink && (
               <a
