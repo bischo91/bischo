@@ -11,6 +11,7 @@ class Resume extends React.Component {
           <iframe
             src="https://drive.google.com/file/d/1QW0Az1AvOdzulRqyY0XDTCKrFNTMl__9/preview"
             className="w-[90vw] aspect-[2/3] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[40vw] max-h-screen"
+            title="resume"
           />
         </div>
       </div>
