@@ -33,7 +33,7 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="overflow-hidden">
         {this.props.showSubnav && (
           <div className="fixed hidden h-full m-auto my-auto ml-4 shadow md:w-32 top-12 lg:flex">
             <div className="flex w-full h-full m-auto">

@@ -34,7 +34,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <div className="w-full h-full min-h-screen bg-primary">
+      <div className="w-full h-full min-h-screen overflow-hidden bg-primary">
         <div
           className="w-56 h-56 m-auto mt-20 flip sm:w-96 sm:h-96"
           onClick={() =>

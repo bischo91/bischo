@@ -5,7 +5,7 @@ class Resume extends React.Component {
 
   render() {
     return (
-      <div className="relative flex-col w-full min-h-screen mx-auto mt-24 sm:w-3/4 text-primary bg-primary">
+      <div className="relative flex-col w-full min-h-screen mx-auto mt-24 overflow-hidden sm:w-3/4 text-primary bg-primary">
         <h1 className="px-2 mb-8 font-mono text-4xl">RESUME</h1>
         <div className="space-y-4 sm:-ml-4 row">
           <iframe
