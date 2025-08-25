@@ -3,8 +3,14 @@ import "./styles/tailwind.css";
 import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 
+import AnalyticsTracker from "./AnalytricsTracker";
 import Navigation from "./components/Navigation";
+import ReactGA from "react-ga4";
+
 // import CryptoSearchApp from "./components/cryptoApp/CryptoSearchApp";
+
+const GA_MEASUREMENT_ID = "G-TF1CDEFRM4";
+ReactGA.initialize(GA_MEASUREMENT_ID);
 
 class App extends Component {
   componentDidMount() {
@@ -17,6 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="flex flex-col bg-primary">
+        <AnalyticsTracker />
         {/* <Routes>
           <Route path="/cryptosearch" element={<CryptoSearchApp />} />
         </Routes> */}
