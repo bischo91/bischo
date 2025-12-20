@@ -1,1 +1,12 @@
 @import 'tailwindcss';
+
+@theme {
+	--color-primary: #2f2f2f /*--color-primary-dark*/;
+	--color-secondary: #6a6a6a;
+}
+
+@layer base {
+	body {
+		@apply text-white;
+	}
+}

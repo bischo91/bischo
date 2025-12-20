@@ -14,7 +14,7 @@
 	};
 </script>
 
-<div class="bg-primary h-full min-h-screen w-full overflow-hidden" id="about">
+<div class="h-full min-h-screen w-full overflow-hidden bg-primary" id="about">
 	<div class="m-auto mt-20 h-56 w-56 sm:h-96 sm:w-96 {flipClass}" id="flipProfile">
 		<div class="flip-content">
 			<div class="flip-front">
@@ -25,8 +25,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-primary mx-4 mt-24 h-full sm:mt-16">
-		<p class="text-primary text-center font-mono text-sm sm:text-lg md:text-xl lg:text-2xl">
+	<div class="mx-4 mt-24 h-full bg-primary sm:mt-16">
+		<p class="text-center font-mono text-sm sm:text-lg md:text-xl lg:text-2xl">
 			Hello World! <br />
 			I'm Brian.<br />
 			I'm an enthusiastic developer and an engineer<br />

@@ -70,7 +70,7 @@
 
 <div class="">
 	<nav
-		class={`${isNavFixed ? 'fixed top-0' : 'absolute bottom-0'} z-50 w-screen transition-all duration-300`}
+		class={`${isNavFixed ? 'fixed top-0' : 'absolute bottom-0'} z-50 w-screen bg-secondary transition-all duration-300`}
 		on:scroll={handleScroll}
 		bind:this={navRef}
 	>
