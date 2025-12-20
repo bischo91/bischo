@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { About, Navigation } from '$lib/components';
-	import Projects from '$lib/components/projects.svelte';
+	import { Projects } from '$lib/components/projects/';
 	import Resume from '$lib/components/resume.svelte';
 	import Contact from '$lib/components/contact.svelte';
 
