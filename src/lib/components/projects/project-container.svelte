@@ -18,7 +18,6 @@
 	let { project }: Props = $props();
 
 	let index = $state(0),
-		paused = $state(true),
 		init = $state(false);
 
 	const slides = $derived(
@@ -53,12 +52,12 @@
 		},
 		controls: {
 			dots: true,
-			dotsnum: true,
-			dotsarrow: true,
-			dotspure: false,
+			dotsnum: false,
+			dotsarrow: false,
+			dotspure: true,
 			arrows: true,
 			keys: true,
-			drag: false,
+			drag: true,
 			wheel: true
 		},
 		options: {
@@ -68,16 +67,11 @@
 			sensity: 0.3
 		}
 	});
-
-	const videoControl = (e, id) => {
-		if (paused) e.target.play();
-		else e.target.pause();
-	};
 </script>
 
-<div class="mx-auto max-w-full space-y-2 overflow-x-hidden">
-	<div class="mx-2 mt-16 inline-flex h-8 w-full">
-		<h2 class="my-4 px-1 font-mono text-2xl md:text-3xl lg:text-2xl">
+<div class="max-w-full mx-auto space-y-2 overflow-x-hidden">
+	<div class="inline-flex w-full h-8 mx-2 mt-16">
+		<h2 class="px-1 my-4 font-mono text-2xl md:text-3xl lg:text-2xl">
 			{project.title}
 			{#if project.gitHubLink}
 				<a
@@ -86,24 +80,18 @@
 					target="_blank"
 					rel="noreferrer"
 				>
-					<img src={github_logo} alt="GitHub" class="inline-flex h-6 w-auto object-scale-down" />
+					<img src={github_logo} alt="GitHub" class="inline-flex object-scale-down w-auto h-6" />
 				</a>
 			{/if}
 		</h2>
 	</div>
 	{#if project.imageSrc}
-		<div class="slidy-wrapper w-full pb-12">
+		<div class="w-full h-full mt-8 slidy-wrapper">
 			<Slidy {...slidy} bind:index bind:init>
-				{#snippet children({ item })}
+				{#snippet children({ item }: { item: { type: string; src: string; poster: string } })}
 					<div class="slide-wrapper">
 						{#if item.type === 'video'}
-							<video
-								src={item.src}
-								poster={item.poster}
-								onclick={(e) => videoControl(e, item.ix)}
-								bind:paused
-								class="media-content"
-							>
+							<video src={item.src} poster={item.poster} class="media-content" controls muted loop>
 								<track kind="captions" />
 							</video>
 						{:else}
@@ -114,9 +102,9 @@
 			</Slidy>
 		</div>
 	{/if}
-	<div class="mx-auto flex w-full flex-col lg:flex-row">
-		<div class="text-md mx-3 w-full p-2 lg:w-3/4">
-			<p class="font-openSans md:text-md mx-auto mt-12 w-full leading-relaxed">
+	<div class="flex flex-col w-full mx-auto lg:flex-row">
+		<div class="w-full p-2 mx-3 text-md lg:w-3/4">
+			<p class="w-full mx-auto mt-12 leading-relaxed font-openSans md:text-md">
 				{project?.description}
 			</p>
 			{#if project?.demoLink}
@@ -128,14 +116,14 @@
 			{/if}
 		</div>
 		{#if project?.techStack && project.techStack?.length > 0}
-			<div class="mx-3 mt-10 w-full p-2 lg:w-1/4">
-				<h3 class="text-md my-2 h-6 font-mono md:text-lg lg:text-xl">Technical Sheet</h3>
+			<div class="w-full p-2 mx-3 mt-10 lg:w-1/4">
+				<h3 class="h-6 my-2 font-mono text-md md:text-lg lg:text-xl">Technical Sheet</h3>
 				{#each project.techStack as techStack}
-					<ul class="md:text-md list-disc font-mono text-sm">
+					<ul class="font-mono text-sm list-disc md:text-md">
 						<li>
 							{techStack.language}
 							{#if techStack.packages && techStack.packages?.length > 0}
-								<ul class="list-disc pl-4">
+								<ul class="pl-4 list-disc">
 									{#each techStack.packages as packages}
 										<li>{packages}</li>
 									{/each}
@@ -150,91 +138,27 @@
 </div>
 
 <style>
-	.slidy-wrapper {
-		position: relative;
-		overflow-x: hidden;
-		width: 100%;
-		max-width: 100%;
-	}
-
 	.slide-wrapper {
 		width: 100%;
 		height: 100%;
 		display: flex;
-		align-items: center;
 		justify-content: center;
-		overflow: hidden;
-		box-sizing: border-box;
 	}
-
 	.media-content {
-		max-width: 100%;
-		max-height: 100%;
-		width: auto;
-		height: auto;
-		object-fit: contain;
-		display: block;
-	}
-
-	:global(#slidy) {
-		overflow: hidden !important;
-		max-width: 100%;
-	}
-
-	:global(#slidy .slidy-ul li) {
-		overflow: hidden !important;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	:global(#slidy .slidy-dots) {
-		position: absolute !important;
-		bottom: -60px !important;
-		top: auto !important;
-		left: 50% !important;
-		transform: translateX(-50%) !important;
-		width: auto !important;
-		max-width: 100% !important;
-		height: auto !important;
-		display: flex !important;
-		justify-content: center;
-		align-items: center;
-		gap: 8px;
-		z-index: 10;
-		overflow: visible;
-	}
-
-	:global(#slidy .slidy-dots li button) {
-		background-color: transparent !important;
-		background: none !important;
-		border: none !important;
-		color: #b0b0b0 !important;
-		opacity: 1 !important;
-		transition: color 0.3s ease;
-	}
-
-	:global(#slidy .slidy-dots li.active),
-	:global(#slidy .slidy-dots li.active button) {
-		color: #ffffff !important;
-		background-color: transparent !important;
-		background: none !important;
+		height: 90%;
+		width: 85%;
 	}
 
 	:global(#slidy .slidy-dots.pure li button) {
-		background: transparent !important;
-		background-color: transparent !important;
-		color: #b0b0b0 !important;
+		background-color: rgba(255, 255, 255, 0.25);
 	}
 
 	:global(#slidy .slidy-dots.pure li.active button) {
-		background: transparent !important;
-		background-color: transparent !important;
-		color: #ffffff !important;
+		background-color: white !important;
 	}
 
-	:global(#slidy .slidy-dots li button:hover) {
-		color: #ffffff !important;
+	:global(#slidy .slidy-dots.pure li button:hover) {
+		background-color: rgba(255, 255, 255, 0.5);
 	}
 
 	:global(#slidy .arrow-left),
@@ -242,30 +166,22 @@
 	:global(#slidy .dots-arrow-left button),
 	:global(#slidy .dots-arrow-right button) {
 		background-color: transparent !important;
-		background: none !important;
 		color: #ffffff !important;
-		opacity: 1 !important;
 		transition:
 			background-color 0.3s ease,
 			opacity 0.3s ease;
 		font-size: 24px !important;
-		width: auto !important;
-		height: 100% !important;
-		min-height: 60vh !important;
-		max-height: 600px !important;
+		border-radius: 50%;
 		padding: 0 12px !important;
-		line-height: 1 !important;
-		border-radius: 0 !important;
-		display: flex !important;
-		align-items: center !important;
-		justify-content: center !important;
+		z-index: 100;
 	}
 
 	:global(#slidy .arrow-left:hover),
 	:global(#slidy .arrow-right:hover),
 	:global(#slidy .dots-arrow-left:hover button),
 	:global(#slidy .dots-arrow-right:hover button) {
-		background-color: rgba(255, 255, 255, 0.15) !important;
-		opacity: 1;
+		background-color: rgba(255, 255, 255, 0.25) !important;
+		/*opacity: 1;*/
+		z-index: 100;
 	}
 </style>
