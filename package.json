@@ -26,5 +26,11 @@
 		"tailwindcss": "^4.1.18",
 		"typescript": "^5.9.3",
 		"vite": "^7.2.6"
+	},
+	"dependencies": {
+		"@slidy/svelte": "^3.5.3",
+		"flowbite": "^4.0.1",
+		"flowbite-svelte": "^1.31.0",
+		"svelte-slidy": "^2.8.7"
 	}
 }
