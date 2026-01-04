@@ -1,17 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import emailjs from '@emailjs/browser';
-
-	const EMAILJS_USER_ID = 'user_G450MAckYglOAjutsXnzC';
-	const EMAILJS_SERVICE_ID = 'service_bischo';
-	const EMAILJS_TEMPLATE_ID = 'template_bischo';
-
 	let formElement: HTMLFormElement;
 	let isSubmitting = false;
-
-	onMount(() => {
-		emailjs.init(EMAILJS_USER_ID);
-	});
 
 	const sendEmail = async (e: SubmitEvent) => {
 		e.preventDefault();
@@ -20,11 +9,34 @@
 
 		isSubmitting = true;
 
+		const formData = new FormData(formElement);
+		const name = formData.get('user_name') as string;
+		const email = formData.get('user_email') as string;
+		const subject = formData.get('subject') as string;
+		const message = formData.get('message') as string;
+
 		try {
-			await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formElement, EMAILJS_USER_ID);
-			alert('Email sent! Thank you!');
-			formElement.reset();
+			const response = await fetch('/api/email', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ name, email, subject, message })
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				alert('Email sent! Thank you!');
+				formElement.reset();
+			} else {
+				alert(
+					data.message ||
+						'Something went wrong.\n Please send me an email directly at bischo91@gmail.com'
+				);
+			}
 		} catch (error) {
+			console.error(error);
 			alert('Something went wrong.\n Please send me an email directly at bischo91@gmail.com');
 		} finally {
 			isSubmitting = false;
@@ -32,13 +44,13 @@
 	};
 </script>
 
-<form bind:this={formElement} on:submit={sendEmail} class="mb-12 mx-14">
+<form bind:this={formElement} on:submit={sendEmail} class="mx-2 mb-12">
 	<input
 		type="text"
 		name="user_name"
 		placeholder="Name"
 		required
-		class="flex w-full px-3 py-2 my-4 bg-white rounded-lg text-primary"
+		class="my-4 flex w-full rounded-lg bg-white px-3 py-2 text-primary"
 		disabled={isSubmitting}
 	/>
 	<input
@@ -46,7 +58,7 @@
 		name="user_email"
 		placeholder="Email"
 		required
-		class="flex w-full px-3 py-2 my-4 bg-white rounded-lg text-primary"
+		class="my-4 flex w-full rounded-lg bg-white px-3 py-2 text-primary"
 		disabled={isSubmitting}
 	/>
 	<input
@@ -54,19 +66,19 @@
 		name="subject"
 		placeholder="Subject"
 		required
-		class="flex w-full px-3 py-2 my-4 bg-white rounded-lg text-primary"
+		class="my-4 flex w-full rounded-lg bg-white px-3 py-2 text-primary"
 		disabled={isSubmitting}
 	/>
 	<textarea
 		name="message"
 		placeholder="Message"
 		required
-		class="flex w-full h-64 px-3 py-2 my-4 bg-white rounded-lg text-primary"
+		class="my-4 flex h-64 w-full rounded-lg bg-white px-3 py-2 text-primary"
 		disabled={isSubmitting}
 	></textarea>
 	<button
 		type="submit"
-		class="flex float-right px-4 py-2 mt-4 font-bold text-white rounded-lg bg-primary"
+		class="float-right mt-4 flex cursor-pointer rounded-lg bg-secondary px-4 py-2 font-bold text-white"
 		disabled={isSubmitting}
 	>
 		{isSubmitting ? 'Sending...' : 'Send'}

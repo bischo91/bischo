@@ -30,7 +30,7 @@ export const projectContents = [
 		title: 'Weight Lift Counter',
 		imageSrc: [do_you_lift_1, do_you_lift_2, do_you_lift_3],
 		previewSrc: [do_you_lift_preview_1, do_you_lift_preview_2, do_you_lift_preview_3],
-		gitHubLink: 'https://github.com/bischo91/do-you-lift',
+		gitHubLink: 'https://github.com/bischo91/do-you-lift-app',
 		description:
 			'I developed a web application that connects to a web/mobile camera to count reps for various workouts in real time. Body points are detected by pose estimation package, Mediapipe, and angles are calculated based on the body points. This real-time video can also be recorded and downloaded by a user.',
 		techStack: [
