@@ -25,6 +25,7 @@
 			id: i,
 			type: image.split('.')[1] == 'mp4' ? 'video' : 'image',
 			src: image,
+			poster: project.previewSrc?.[i] || '',
 			title: image
 		}))
 	);
