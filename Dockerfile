@@ -11,7 +11,8 @@ RUN npm install -g bun
 COPY package.json bun.lock* ./
 
 # Install dependencies using bun (need dev deps for build)
-RUN bun install --frozen-lockfile
+# Note: Not using --frozen-lockfile to allow lockfile updates if package.json changed
+RUN bun install
 
 # Copy source code
 COPY . .
