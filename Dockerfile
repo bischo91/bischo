@@ -17,6 +17,14 @@ RUN bun install
 # Copy source code
 COPY . .
 
+# Build arguments for private environment variables
+ARG PRIVATE_VITE_RESEND_API_KEY
+ARG PRIVATE_VITE_GEMINI_API_KEY
+
+# Set as environment variables for build
+ENV PRIVATE_VITE_RESEND_API_KEY=$PRIVATE_VITE_RESEND_API_KEY
+ENV PRIVATE_VITE_GEMINI_API_KEY=$PRIVATE_VITE_GEMINI_API_KEY
+
 # Build the application
 RUN bun run build
 

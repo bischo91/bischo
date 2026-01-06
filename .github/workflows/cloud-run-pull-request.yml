@@ -32,7 +32,10 @@ jobs:
       - name: Build Docker image
         run: |
           SERVICE_NAME="bischo-preview-pr-${{ github.event.pull_request.number }}"
-          docker build -t gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA \
+          docker build \
+            --build-arg PRIVATE_VITE_RESEND_API_KEY="${{ secrets.PRIVATE_VITE_RESEND_API_KEY }}" \
+            --build-arg PRIVATE_VITE_GEMINI_API_KEY="${{ secrets.PRIVATE_VITE_GEMINI_API_KEY }}" \
+            -t gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA \
             -t gcr.io/$PROJECT_ID/$SERVICE_NAME:latest .
 
       - name: Push Docker image
