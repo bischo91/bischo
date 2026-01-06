@@ -1,12 +1,7 @@
 import accountbook_1 from '$lib/assets/accountbook_monthly.png';
 import accountbook_2 from '$lib/assets/accountbook_trend.png';
-import autonomous_car_1 from '$lib/assets/autonomous_car_autonomous.mp4';
-import autonomous_car_2 from '$lib/assets/autonomous_rc_car_manual.mp4';
 import autonomous_car_preview_1 from '$lib/assets/autonomous_car_autonomous.png';
 import autonomous_car_preview_2 from '$lib/assets/autonomous_rc_car_manual.png';
-import do_you_lift_1 from '$lib/assets/do_you_lift_1.mp4';
-import do_you_lift_2 from '$lib/assets/do_you_lift_2.mp4';
-import do_you_lift_3 from '$lib/assets/do_you_lift_3.mp4';
 import do_you_lift_preview_1 from '$lib/assets/do_you_lift_preview_1.png';
 import do_you_lift_preview_2 from '$lib/assets/do_you_lift_preview_2.png';
 import do_you_lift_preview_3 from '$lib/assets/do_you_lift_preview_3.png';
@@ -23,6 +18,12 @@ import lennyspizza_4 from '$lib/assets/lennyspizza_promotion_tablet.png';
 import zillowscrape_1 from '$lib/assets/zillow_trend.png';
 import zillowscrape_2 from '$lib/assets/zillow_scatter.png';
 import zillowscrape_3 from '$lib/assets/zillow_bar.png';
+// Videos are in static folder to avoid SvelteKit asset pipeline hashing
+const autonomous_car_1 = '/videos/autonomous_car_autonomous.mp4';
+const autonomous_car_2 = '/videos/autonomous_rc_car_manual.mp4';
+const do_you_lift_1 = '/videos/do_you_lift_1.mp4';
+const do_you_lift_2 = '/videos/do_you_lift_2.mp4';
+const do_you_lift_3 = '/videos/do_you_lift_3.mp4';
 
 export const projectContents = [
 	{
