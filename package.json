@@ -39,7 +39,6 @@
 		"marked": "^17.0.1",
 		"pdf-parse": "^2.4.5",
 		"resend": "^6.6.0",
-		"svelte-adapter-firebase": "^0.15.0",
 		"svelte-slidy": "^2.8.7"
 	}
 }
