@@ -48,17 +48,33 @@ jobs:
         id: deploy
         run: |
           SERVICE_NAME="bischo-preview-pr-${{ github.event.pull_request.number }}"
-          gcloud run deploy $SERVICE_NAME \
-            --image gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA \
-            --platform managed \
-            --region $REGION \
-            --allow-unauthenticated \
-            --set-env-vars="PRIVATE_VITE_RESEND_API_KEY=${{ secrets.PRIVATE_VITE_RESEND_API_KEY }},PRIVATE_VITE_GEMINI_API_KEY=${{ secrets.PRIVATE_VITE_GEMINI_API_KEY }}" \
-            --memory=512Mi \
-            --cpu=1 \
-            --max-instances=3 \
-            --min-instances=0 \
-            --no-traffic
+          # Check if service exists to conditionally use --no-traffic
+          if gcloud run services describe $SERVICE_NAME --region $REGION --quiet 2>/dev/null; then
+            # Service exists, update with no-traffic flag
+            gcloud run deploy $SERVICE_NAME \
+              --image gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA \
+              --platform managed \
+              --region $REGION \
+              --allow-unauthenticated \
+              --set-env-vars="PRIVATE_VITE_RESEND_API_KEY=${{ secrets.PRIVATE_VITE_RESEND_API_KEY }},PRIVATE_VITE_GEMINI_API_KEY=${{ secrets.PRIVATE_VITE_GEMINI_API_KEY }}" \
+              --memory=512Mi \
+              --cpu=1 \
+              --max-instances=3 \
+              --min-instances=0 \
+              --no-traffic
+          else
+            # Service doesn't exist, create without no-traffic flag
+            gcloud run deploy $SERVICE_NAME \
+              --image gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA \
+              --platform managed \
+              --region $REGION \
+              --allow-unauthenticated \
+              --set-env-vars="PRIVATE_VITE_RESEND_API_KEY=${{ secrets.PRIVATE_VITE_RESEND_API_KEY }},PRIVATE_VITE_GEMINI_API_KEY=${{ secrets.PRIVATE_VITE_GEMINI_API_KEY }}" \
+              --memory=512Mi \
+              --cpu=1 \
+              --max-instances=3 \
+              --min-instances=0
+          fi
 
           SERVICE_URL=$(gcloud run services describe $SERVICE_NAME --region $REGION --format 'value(status.url)')
           echo "SERVICE_URL=$SERVICE_URL" >> $GITHUB_OUTPUT
