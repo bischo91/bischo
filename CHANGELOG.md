@@ -1,5 +1,11 @@
 <br />
 
+## [1.0.0] - 2025-01-04
+
+### Updated
+
+- Revamped app to Svelte
+
 ## [0.3.4] - 2023-08-25
 
 ### Added

@@ -1,0 +1,15 @@
+node_modules
+build
+.svelte-kit
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+.vscode
+.idea
+coverage
+dist
+
