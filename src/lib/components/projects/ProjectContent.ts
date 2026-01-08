@@ -62,13 +62,18 @@ export const projectContents = [
 		imageSrc: [accountbook_1, accountbook_2],
 		gitHubLink: 'https://github.com/bischo91/Finance',
 		description:
-			'I developed customized account book that composes all the transactions from multiple banks to easily visualize spending. The application takes excel files that includes transactions from multiple banks, and categorize each transaction. The GUI allows the user to show monthly spending, and also edit category on their own, if incorrectly categorized. Also, all the transactions can be saved after filtering/categorizing into one excel file for each month. Yearly, or long-term, spending data can be presented with user-defined month range with saved monthly excel files.',
+			'I developed customized account book that composes all the transactions from multiple banks to easily visualize spending. The application takes excel files that includes transactions from multiple banks, and categorize each transaction. The GUI allows the user to show monthly spending, and also edit category on their own, if incorrectly categorized. Also, all the transactions can be saved after filtering/categorizing into one excel file for each month. Yearly, or long-term, spending data can be presented with user-defined month range with saved monthly excel files.\nThis was later developed into a web application in Vue.js and deployed on Firebase.',
 		techStack: [
 			{
 				language: 'Python',
 				packages: ['PyQt', 'openpyxl', 'xlswriter', 'Matplotlib', 'Numpy']
+			},
+			{
+				language: 'Typescript',
+				packages: ['Vue.js', 'Firebase']
 			}
-		]
+		],
+		demoLink: 'https://account-book-80de2.web.app/'
 	},
 	{
 		id: 4,
