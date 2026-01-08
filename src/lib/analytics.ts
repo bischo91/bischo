@@ -3,9 +3,7 @@ import { getAnalytics, logEvent, type Analytics } from 'firebase/analytics';
 
 const firebaseConfig = {
 	apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY || 'AIzaSyDHFNmxK5N8KFDrc0LlT0D2mXuNvOlBW-w',
-	//authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN || 'brian-cho.firebaseapp.com',
 	projectId: import.meta.env.PUBLIC_FIREBASE_PROJECT_ID || 'brian-cho',
-	//storageBucket: import.meta.env.PUBLIC_FIREBASE_STORAGE_BUCKET || 'brian-cho.firebasestorage.app',
 	messagingSenderId: import.meta.env.PUBLIC_FIREBASE_MESSAGING_SENDER_ID || '346649456841',
 	appId: import.meta.env.PUBLIC_FIREBASE_APP_ID || '1:346649456841:web:598bf0db3061a4e339dd18',
 	measurementId: import.meta.env.PUBLIC_FIREBASE_MEASUREMENT_ID || 'G-TF1CDEFRM4' // Required for Analytics

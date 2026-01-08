@@ -70,9 +70,9 @@
 	});
 </script>
 
-<div class="max-w-full mx-auto space-y-2 overflow-x-hidden">
-	<div class="inline-flex w-full h-8 mx-2">
-		<h2 class="px-1 my-4 text-2xl md:text-3xl lg:text-2xl">
+<div class="mx-auto max-w-full space-y-2 overflow-x-hidden">
+	<div class="mx-2 inline-flex h-8 w-full">
+		<h2 class="my-4 px-1 text-2xl md:text-3xl lg:text-2xl">
 			{project.title}
 			{#if project.gitHubLink}
 				<a
@@ -81,13 +81,13 @@
 					target="_blank"
 					rel="noreferrer"
 				>
-					<img src={github_logo} alt="GitHub" class="inline-flex object-scale-down w-auto h-6" />
+					<img src={github_logo} alt="GitHub" class="inline-flex h-6 w-auto object-scale-down" />
 				</a>
 			{/if}
 		</h2>
 	</div>
 	{#if project.imageSrc}
-		<div class="w-full h-full mt-8 slidy-wrapper">
+		<div class="slidy-wrapper mt-8 h-full w-full">
 			<Slidy {...slidy} bind:index bind:init>
 				{#snippet children({ item }: { item: { type: string; src: string; poster: string } })}
 					<div class="slide-wrapper">
@@ -103,9 +103,9 @@
 			</Slidy>
 		</div>
 	{/if}
-	<div class="flex flex-col w-full mx-auto lg:flex-row">
-		<div class="w-full p-2 mx-3 text-md lg:w-3/4">
-			<p class="w-full mx-auto mt-12 leading-relaxed md:text-md">
+	<div class="mx-auto flex w-full flex-col lg:flex-row">
+		<div class="text-md mx-3 w-full p-2 lg:w-3/4">
+			<p class="md:text-md mx-auto mt-12 w-full leading-relaxed">
 				{project?.description}
 			</p>
 			{#if project?.demoLink}
@@ -117,14 +117,14 @@
 			{/if}
 		</div>
 		{#if project?.techStack && project.techStack?.length > 0}
-			<div class="w-full p-2 mx-3 mt-10 lg:w-1/4">
-				<h3 class="h-6 my-2 text-md md:text-lg lg:text-xl">Tech Stack</h3>
+			<div class="mx-3 mt-10 w-full p-2 lg:w-1/4">
+				<h3 class="text-md my-2 h-6 md:text-lg lg:text-xl">Tech Stack</h3>
 				{#each project.techStack as techStack}
-					<ul class="text-sm list-disc md:text-md">
+					<ul class="md:text-md list-disc text-sm">
 						<li>
 							{techStack.language}
 							{#if techStack.packages && techStack.packages?.length > 0}
-								<ul class="pl-4 list-disc">
+								<ul class="list-disc pl-4">
 									{#each techStack.packages as packages}
 										<li>{packages}</li>
 									{/each}
