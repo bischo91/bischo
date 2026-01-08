@@ -1,5 +1,8 @@
-import accountbook_1 from '$lib/assets/accountbook_monthly.png';
-import accountbook_2 from '$lib/assets/accountbook_trend.png';
+import accountbook_1 from '$lib/assets/accountbook_1.png';
+import accountbook_2 from '$lib/assets/accountbook_2.png';
+import accountbook_3 from '$lib/assets/accountbook_3.png';
+import accountbook_4 from '$lib/assets/accountbook_4.png';
+import accountbook_5 from '$lib/assets/accountbook_5.png';
 import autonomous_car_preview_1 from '$lib/assets/autonomous_car_autonomous.png';
 import autonomous_car_preview_2 from '$lib/assets/autonomous_rc_car_manual.png';
 import do_you_lift_preview_1 from '$lib/assets/do_you_lift_preview_1.png';
@@ -59,7 +62,7 @@ export const projectContents = [
 	{
 		id: 5,
 		title: 'Accounting Book',
-		imageSrc: [accountbook_1, accountbook_2],
+		imageSrc: [accountbook_1, accountbook_2, accountbook_3, accountbook_4, accountbook_5],
 		gitHubLink: 'https://github.com/bischo91/Finance',
 		description:
 			'I developed customized account book that composes all the transactions from multiple banks to easily visualize spending. The application takes excel files that includes transactions from multiple banks, and categorize each transaction. The GUI allows the user to show monthly spending, and also edit category on their own, if incorrectly categorized. Also, all the transactions can be saved after filtering/categorizing into one excel file for each month. Yearly, or long-term, spending data can be presented with user-defined month range with saved monthly excel files.\nThis was later developed into a web application in Vue.js and deployed on Firebase.',
