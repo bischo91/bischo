@@ -45,7 +45,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			from: 'onboarding@resend.dev',
 			to: 'bischo91@gmail.com',
 			replyTo: email,
-			subject: `${subject} - brian-cho.web.app`,
+			subject: `${subject} - brian-cho.com`,
 			html: `
 				<p><strong>Name:</strong> ${name}</p>
 				<p><strong>Email:</strong> ${email}</p>
