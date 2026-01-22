@@ -41,5 +41,3 @@ rebase
 Change from main
 
 Rebase test
-
-rebase test
